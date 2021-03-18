@@ -523,7 +523,11 @@ An example is included `example/node.js`
 [npm-url]: https://www.npmjs.com/package/@hckrnews/arrays
 [npm-image]: https://img.shields.io/npm/v/@hckrnews/arrays.svg
 [npm-stats]: https://npm-stat.com/charts.html?package=@hckrnews/arrays
+[travis-url]: https://www.travis-ci.com/github/hckrnews/arrays
+[travis-image]: https://www.travis-ci.com/hckrnews/arrays.svg?branch=main
 [coveralls-url]: https://coveralls.io/r/hckrnews/arrays
 [coveralls-image]: https://img.shields.io/coveralls/hckrnews/arrays/master.svg
+[codecov-url]: https://app.codecov.io/gh/hckrnews/arrays
+[codecov-image]: https://img.shields.io/codecov/c/github/hckrnews/arrays.svg
 [scrutinizer-url]: https://scrutinizer-ci.com/g/hckrnews/arrays/?branch=master
-[scrutinizer-image]: https://scrutinizer-ci.com/g/hckrnews/arrays/badges/quality-score.png?b=master
+[scrutinizer-image]: https://scrutinizer-ci.com/g/hckrnews/arrays/badges/quality-score.png?b=main
