@@ -1,0 +1,101 @@
+{
+    "name": "@hckrnews/arrays",
+    "version": "0.1.9",
+    "description": "Usefull array helpers.",
+    "files": [
+        "src/helpers.js",
+        "src/modules/average.js",
+        "src/modules/diff.js",
+        "src/modules/first.js",
+        "src/modules/getByKey.js",
+        "src/modules/intersect.js",
+        "src/modules/last.js",
+        "src/modules/max.js",
+        "src/modules/min.js",
+        "src/modules/multifilter.js",
+        "src/modules/multikey.js",
+        "src/modules/multisort.js",
+        "src/modules/random.js",
+        "src/modules/summ.js",
+        "src/modules/unique.js",
+        "dist/helpers.js",
+        "dist/helpers.js.map",
+        "dist/helpers.modern.js",
+        "dist/helpers.modern.js.map",
+        "dist/helpers.module.js",
+        "dist/helpers.module.js.map",
+        "dist/helpers.umd.js",
+        "dist/helpers.umd.js.map"
+    ],
+    "source": "src/helpers.js",
+    "main": "dist/helpers.js",
+    "module": "dist/helpers.module.js",
+    "esmodule": "dist/helpers.modern.js",
+    "unpkg": "dist/helpers.umd.js",
+    "umd:main": "dist/helpers.umd.js",
+    "exports": {
+        ".": {
+            "require": "./dist/helpers.js",
+            "import": "./dist/helpers.module.mjs",
+            "default": "./dist/helpers.module.js"
+        },
+        "./source": "./src/helpers.js",
+        "./main": "./dist/helpers.js",
+        "./module": "./dist/helpers.module.mjs",
+        "./modern": "./dist/helpers.modern.mjs",
+        "./umd": "./dist/helpers.umd.cjs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hckrnews/arrays.git"
+    },
+    "keywords": [
+        "javascript",
+        "array",
+        "object"
+    ],
+    "author": {
+        "name": "Pieter Wigboldus",
+        "url": "https://hckr.news/"
+    },
+    "bugs": {
+        "url": "https://github.com/hckrnews/arrays/issues"
+    },
+    "license": "MIT",
+    "homepage": "https://github.com/hckrnews/arrays#readme",
+    "scripts": {
+        "build": "microbundle --target node",
+        "dev": "microbundle --target node watch",
+        "lint": "eslint src/*.js --config .eslintrc",
+        "lint:fix": "eslint src/*.js --config .eslintrc --fix",
+        "test": "jest",
+        "test:watch": "jest src --watch",
+        "example": "node -r esm example/node.js",
+        "coveralls": "jest && codecov && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+        "cpd": "node_modules/jscpd/bin/jscpd src"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.3",
+        "@babel/preset-env": "^7.12.1",
+        "@hckrnews/eslint-config": "^2.0.0",
+        "babel-eslint": "^10.1.0",
+        "babel-jest": "^26.6.3",
+        "codecov": "^3.8.1",
+        "coveralls": "^3.1.0",
+        "eslint": "^7.13.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-config-prettier": "^8.1.0",
+        "eslint-plugin-html": "^6.1.2",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.3.1",
+        "esm": "^3.2.25",
+        "jest": "^26.6.3",
+        "microbundle": "^0.12.4",
+        "prettier": "^2.2.0"
+    },
+    "type": "module",
+    "engines": {
+        "node": ">= 10.13"
+    }
+}
