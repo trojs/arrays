@@ -1,5 +1,5 @@
 import { expect, describe, it } from '@jest/globals';
-import { Arr } from '../src/helpers';
+import { Arr } from '../src/helpers.js';
 
 describe('First', () => {
     it('Should return the first, in this example should it be 1.', () => {

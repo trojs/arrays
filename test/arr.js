@@ -1,5 +1,5 @@
 import { expect, describe, it } from '@jest/globals';
-import { Arr } from '../src/helpers';
+import { Arr } from '../src/helpers.js';
 
 const original = new Arr(1, 2, 3);
 const mapped = original.map((x) => x * x);

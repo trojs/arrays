@@ -1,5 +1,5 @@
 import { expect, describe, it } from '@jest/globals';
-import { Arr } from '../src/helpers';
+import { Arr } from '../src/helpers.js';
 
 describe('Average', () => {
     it('Should return the average, in this example should it be 2.', () => {
