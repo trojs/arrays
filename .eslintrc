@@ -2,7 +2,17 @@
     "extends": [
         "@hckrnews/eslint-config"
     ],
+    "plugins": [
+        "import"
+    ],
     "rules": {
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "always"
+            }
+        ],
         "consistent-return": "warn",
         "eqeqeq": "warn"
     },
@@ -12,7 +22,11 @@
         "jquery": false,
         "browser": true
     },
+    "parser": "@babel/eslint-parser",
     "parserOptions": {
-        "sourceType": "module"
-    }
+        "sourceType": "module",
+        "babelOptions": {
+            "configFile": "./babel.config.cjs"
+        }
+    },
 }

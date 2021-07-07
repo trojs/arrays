@@ -1,4 +1,4 @@
-import summ from './summ';
+import summ from './summ.js';
 
 export default function average(originalArray) {
     if (!Array.isArray(originalArray) || originalArray.length < 1) {

@@ -1,18 +1,18 @@
-import multisort from './modules/multisort';
-import multifilter from './modules/multifilter';
-import multikey from './modules/multikey';
-import intersect from './modules/intersect';
-import min from './modules/min';
-import max from './modules/max';
-import diff from './modules/diff';
-import unique from './modules/unique';
-import summ from './modules/summ';
-import average from './modules/average';
-import random from './modules/random';
-import getByKey from './modules/getByKey';
-import first from './modules/first';
-import last from './modules/last';
-import update from './modules/update';
+import multisort from './modules/multisort.js';
+import multifilter from './modules/multifilter.js';
+import multikey from './modules/multikey.js';
+import intersect from './modules/intersect.js';
+import min from './modules/min.js';
+import max from './modules/max.js';
+import diff from './modules/diff.js';
+import unique from './modules/unique.js';
+import summ from './modules/summ.js';
+import average from './modules/average.js';
+import random from './modules/random.js';
+import getByKey from './modules/getByKey.js';
+import first from './modules/first.js';
+import last from './modules/last.js';
+import update from './modules/update.js';
 
 /**
  * Object helper

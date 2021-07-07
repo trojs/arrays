@@ -1,5 +1,5 @@
-import min from './min';
-import max from './max';
+import min from './min.js';
+import max from './max.js';
 
 class Match {
     constructor(find, operator) {
