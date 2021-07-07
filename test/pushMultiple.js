@@ -1,3 +1,4 @@
+import { expect, describe, it } from '@jest/globals';
 import { Arr } from '../src/helpers';
 
 const a = new Arr();
