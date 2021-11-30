@@ -1,6 +1,6 @@
 {
     "name": "@hckrnews/arrays",
-    "version": "2.0.3",
+    "version": "2.1.0",
     "description": "Usefull array helpers.",
     "files": [
         "src/helpers.js",
@@ -52,7 +52,7 @@
     },
     "devDependencies": {
         "@babel/core": "^7.12.3",
-        "@babel/eslint-parser": "^7.14.7",
+        "@babel/eslint-parser": "^7.16.3",
         "@babel/plugin-transform-modules-commonjs": "^7.14.0",
         "@babel/preset-env": "^7.12.1",
         "@hckrnews/eslint-config": "^2.0.0",
@@ -60,13 +60,13 @@
         "babel-jest": "^27.0.6",
         "codecov": "^3.8.1",
         "coveralls": "^3.1.0",
-        "eslint": "^7.18.0",
-        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint": "^8.3.0",
+        "eslint-config-airbnb-base": "^15.0.0",
         "eslint-config-prettier": "^8.1.0",
         "eslint-plugin-html": "^6.1.2",
         "eslint-plugin-import": "^2.22.1",
         "eslint-plugin-jsx-a11y": "^6.4.1",
-        "eslint-plugin-prettier": "^3.3.1",
+        "eslint-plugin-prettier": "^4.0.0",
         "esm": "^3.2.25",
         "jest": "^27.0.6",
         "prettier": "^2.2.0"
