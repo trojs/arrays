@@ -1,3 +1,5 @@
+import toJson from './toJson.js';
+
 class Diff {
     constructor(currentArray, otherArray, total) {
         this.currentArray = currentArray;
@@ -8,9 +10,7 @@ class Diff {
     get differenceArray() {
         return this.currentArray.filter(
             (value) =>
-                this.otherArray
-                    .map((item) => JSON.stringify(item))
-                    .indexOf(JSON.stringify(value)) < 0
+                toJson(this.otherArray).indexOf(JSON.stringify(value)) < 0
         );
     }
 
@@ -21,9 +21,7 @@ class Diff {
 
         return this.otherArray.filter(
             (value) =>
-                this.currentArray
-                    .map((item) => JSON.stringify(item))
-                    .indexOf(JSON.stringify(value)) < 0
+                toJson(this.currentArray).indexOf(JSON.stringify(value)) < 0
         );
     }
 
