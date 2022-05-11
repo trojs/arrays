@@ -7,7 +7,10 @@ class Diff {
 
     get differenceArray() {
         return this.currentArray.filter(
-            (value) => this.otherArray.indexOf(value) < 0
+            (value) =>
+                this.otherArray
+                    .map((item) => JSON.stringify(item))
+                    .indexOf(JSON.stringify(value)) < 0
         );
     }
 
@@ -17,7 +20,10 @@ class Diff {
         }
 
         return this.otherArray.filter(
-            (value) => this.currentArray.indexOf(value) < 0
+            (value) =>
+                this.currentArray
+                    .map((item) => JSON.stringify(item))
+                    .indexOf(JSON.stringify(value)) < 0
         );
     }
 
