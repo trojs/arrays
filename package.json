@@ -17,6 +17,7 @@
         "src/modules/multisort.js",
         "src/modules/random.js",
         "src/modules/summ.js",
+        "src/modules/toJson.js",
         "src/modules/unique.js",
         "src/modules/update.js"
     ],
