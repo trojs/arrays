@@ -4,6 +4,16 @@
 
 Array helpers, so you can get very fast your data from the array.
 
+## Sponsors :tada:
+
+If it has saved you development time, please consider [sponsoring the project](https://github.com/sponsors/w3nl)
+with GitHub sponsors!
+
+But me a coffee/book: https://www.buymeacoffee.com/hckrnews
+Or on patreon: patreon.com/w3news
+
+## Example usage
+
 here an example array.
 
 ```javascript
