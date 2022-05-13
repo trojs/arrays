@@ -10,7 +10,7 @@ If it has saved you development time, please consider [sponsoring the project](h
 with GitHub sponsors!
 
 But me a coffee/book: https://www.buymeacoffee.com/hckrnews
-Or on patreon: patreon.com/w3news
+Or on patreon: https://patreon.com/w3news
 
 ## Example usage
 
