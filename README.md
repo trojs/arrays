@@ -221,8 +221,12 @@ var c = ['Luke', 'Paul', 'John'];
 a.intersect(b);
 
 ['Peter', 'Luke']
+```
 
+To compute the intersection of multiple arrays, you can send an array and set the 2nd parameter to true.
 
+![Intersection multiple](./images/intersect-multi.png)
+```javascript
 a.intersect([b, c], true);
 
 ['Luke']
