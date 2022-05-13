@@ -6,7 +6,7 @@ Array helpers, so you can get very fast your data from the array.
 
 here an example array.
 
-```
+```javascript
 import { Arr } from '@hckrnews/arrays';
 
 var exampleArray = new Arr([
@@ -43,7 +43,7 @@ Sort an array with objects by the key of the object.
 
 By default it is asc, and you can set desc as an optional value to the 2nd parameter.
 
-```
+```javascript
 exampleArray.multisort('age', 'desc');
 
 [
@@ -80,7 +80,7 @@ Filters the array for a given key and value.
 
 If the 3th parameter is true, excluding a given key and value.
 
-```
+```javascript
 exampleArray.multifilter('age', '62');
 
 [
@@ -181,7 +181,7 @@ exampleArray.multifilter('name', ['John', 'Peter']);
 
 Plucks the given keys from the array.
 
-```
+```javascript
 exampleArray.multikey(['name', 'age']);
 
 [
@@ -206,12 +206,14 @@ exampleArray.multikey(['name', 'age']);
 
 ## intersect
 
+![Intersection](./images/intersect.png)
+
 Computes the intersection of arrays.
 Returns an array containing the values that are present in all the arrays.
 
 If the 2nd parameter is true, the 1st parameter can contain multiple arrays.
 
-```
+```javascript
 var a = new Arr(['John', 'Peter', 'Luke']);
 var b = ['Peter', 'Luke', 'Paul'];
 var c = ['Luke', 'Paul', 'John'];
@@ -228,20 +230,26 @@ a.intersect([b, c], true);
 
 ## diff
 
+![Difference](./images/diff.png)
+
 Computes the difference of arrays.
 Compares the array values, and return all values from array a that arent present in array b.
 
 If the 2nd parameter is true, it return all values that are not present in any of the arrays.
 
-```
-
+```javascript
 var a = new Arr(['John', 'Peter', 'Luke']);
 var b = ['Peter', 'Luke', 'Paul'];
 
 a.diff(b);
 
 ['John']
+```
 
+Symmetrical Diff
+![Symmetrical Difference](./images/diff-sym.png)
+
+```javascript
 a.diff(b, true);
 
 ['John', 'Paul']
@@ -253,7 +261,7 @@ a.diff(b, true);
 Removes duplicate values from an array.
 Takes the array and returns a new array without duplicate values.
 
-```
+```javascript
 var a = new Arr(['John', 'Peter', 'Luke', 'Peter', 'Luke', 'Paul']);
 
 a.unique;
@@ -267,7 +275,7 @@ Only push the value to the array if the value doesnt exists in the array.
 
 Returns the new length property of the object upon which the method was called.
 
-```
+```javascript
 var a = new Arr();
 
 a.pushIfNotExists('John');
@@ -290,7 +298,7 @@ Only push the value to the array if the value doesnt exists in the array.
 
 Returns the new length property of the object upon which the method was called.
 
-```
+```javascript
 var a = new Arr();
 
 a.pushMultipleIfNotExists([
@@ -334,7 +342,7 @@ Add multiple values to an array.
 
 Returns the new length property of the object upon which the method was called.
 
-```
+```javascript
 var a = new Arr();
 
 a.pushMultiple([
@@ -365,7 +373,7 @@ a.pushMultiple([
 
 The largest of the given numbers. If at least one of the arguments cannot be converted to a number, NaN is returned.
 
-```
+```javascript
 var exampleArray = new Arr([1,2,3]);
 
 exampleArray.max;
@@ -377,7 +385,7 @@ exampleArray.max;
 
 The smallest of the given numbers. If at least one of the arguments cannot be converted to a number, NaN is returned.
 
-```
+```javascript
 var exampleArray = new Arr([1,2,3]);
 
 exampleArray.min;
@@ -389,7 +397,7 @@ exampleArray.min;
 
 Get a random value of an array.
 
-```
+```javascript
 var exampleArray = new Arr([1,2,3]);
 
 exampleArray.random;
@@ -401,7 +409,7 @@ e.g. 2
 
 The summ of all values.
 
-```
+```javascript
 var exampleArray = new Arr([1,2,3]);
 
 exampleArray.summ;
@@ -413,7 +421,7 @@ exampleArray.summ;
 
 Get the average of all values.
 
-```
+```javascript
 var exampleArray = new Arr([1,2,3]);
 
 exampleArray.average;
@@ -425,7 +433,7 @@ exampleArray.average;
 
 Get the first of all values.
 
-```
+```javascript
 var exampleArray = new Arr([1,2,3]);
 
 exampleArray.first;
@@ -437,7 +445,7 @@ exampleArray.first;
 
 Get the last of all values.
 
-```
+```javascript
 var exampleArray = new Arr([1,2,3]);
 
 exampleArray.last;
@@ -449,7 +457,7 @@ exampleArray.last;
 
 Update items in an array.
 
-```
+```javascript
 var exampleArray = new Arr([
     {
         id: 1,
@@ -510,7 +518,7 @@ npm install @hckrnews/arrays
 
 Use the package in your node files.
 
-```
+```javascript
 import { Arr } from '@hckrnews/arrays';
 ```
 
