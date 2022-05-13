@@ -4,6 +4,16 @@
 
 Array helpers, so you can get very fast your data from the array.
 
+## Sponsors :tada:
+
+If it has saved you development time, please consider [sponsoring the project](https://github.com/sponsors/w3nl)
+with GitHub sponsors!
+
+But me a coffee/book: https://www.buymeacoffee.com/hckrnews
+Or on patreon: patreon.com/w3news
+
+## Example usage
+
 here an example array.
 
 ```javascript
@@ -36,6 +46,26 @@ var exampleArray = new Arr([
     },
 ]);
 ```
+
+All methods:
+
+* [multisort](#multisort)
+* [multifilter](#multifilter)
+* [multikey](#multikey)
+* [intersect](#intersect)
+* [diff](#diff)
+* [unique](#unique)
+* [pushIfNotExists](#pushIfNotExists)
+* [pushMultipleIfNotExists](#pushMultipleIfNotExists)
+* [pushMultiple](#pushMultiple)
+* [max](#max)
+* [min](#min)
+* [random](#random)
+* [summ](#summ)
+* [average](#average)
+* [first](#first)
+* [last](#last)
+* [update](#update)
 
 ## multisort
 
