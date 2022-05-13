@@ -9,7 +9,7 @@ class Match {
 
     check(value) {
         if (Array.isArray(this.find)) {
-            return this.checkOperators(value, this.find.indexOf(value) < 0);
+            return this.checkOperators(value, !this.find.includes(value));
         }
 
         return this.checkOperators(value, String(value) !== String(this.find));

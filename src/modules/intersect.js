@@ -6,7 +6,7 @@ export default function intersect(original, array, multi) {
 
         if (multi) {
             const found = jsonValue.reduce((accumulator, currentValue) => {
-                if (currentValue.indexOf(JSON.stringify(value)) >= 0) {
+                if (currentValue.includes(JSON.stringify(value))) {
                     return accumulator + 1;
                 }
 
@@ -16,6 +16,6 @@ export default function intersect(original, array, multi) {
             return found === array.length;
         }
 
-        return jsonValue.indexOf(JSON.stringify(value)) >= 0;
+        return jsonValue.includes(JSON.stringify(value));
     });
 }

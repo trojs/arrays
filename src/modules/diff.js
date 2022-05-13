@@ -9,8 +9,7 @@ class Diff {
 
     get differenceArray() {
         return this.currentArray.filter(
-            (value) =>
-                toJson(this.otherArray).indexOf(JSON.stringify(value)) < 0
+            (value) => !toJson(this.otherArray).includes(JSON.stringify(value))
         );
     }
 
@@ -21,7 +20,7 @@ class Diff {
 
         return this.otherArray.filter(
             (value) =>
-                toJson(this.currentArray).indexOf(JSON.stringify(value)) < 0
+                !toJson(this.currentArray).includes(JSON.stringify(value))
         );
     }
 
