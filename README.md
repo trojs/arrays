@@ -37,6 +37,26 @@ var exampleArray = new Arr([
 ]);
 ```
 
+All methods:
+
+* [multisort](#multisort)
+* [multifilter](#multifilter)
+* [multikey](#multikey)
+* [intersect](#intersect)
+* [diff](#diff)
+* [unique](#unique)
+* [pushIfNotExists](#pushIfNotExists)
+* [pushMultipleIfNotExists](#pushMultipleIfNotExists)
+* [pushMultiple](#pushMultiple)
+* [max](#max)
+* [min](#min)
+* [random](#random)
+* [summ](#summ)
+* [average](#average)
+* [first](#first)
+* [last](#last)
+* [update](#update)
+
 ## multisort
 
 Sort an array with objects by the key of the object.
