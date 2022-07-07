@@ -1,21 +1,23 @@
 import toJson from './toJson.js';
 
 export default function intersect(original, array, multi) {
-    return original.filter((value) => {
-        const jsonValue = toJson(array);
+    const jsonValue = toJson(array);
+    const arrayLength = array.length;
 
+    return original.filter((value) => {
+        const valueToJson = JSON.stringify(value);
         if (multi) {
             const found = jsonValue.reduce((accumulator, currentValue) => {
-                if (currentValue.includes(JSON.stringify(value))) {
+                if (currentValue.includes(valueToJson)) {
                     return accumulator + 1;
                 }
 
                 return accumulator;
             }, 0);
 
-            return found === array.length;
+            return found === arrayLength;
         }
 
-        return jsonValue.includes(JSON.stringify(value));
+        return jsonValue.includes(valueToJson);
     });
 }
