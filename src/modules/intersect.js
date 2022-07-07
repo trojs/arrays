@@ -2,7 +2,7 @@ import toJson from './toJson.js';
 
 export default function intersect(original, array, multi) {
     const jsonValue = toJson(array);
-    const arrayLength = array.length
+    const arrayLength = array.length;
 
     return original.filter((value) => {
         const valueToJson = JSON.stringify(value);
