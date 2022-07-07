@@ -8,8 +8,9 @@ class Diff {
     }
 
     get differenceArray() {
+        const otherArray = toJson(this.otherArray)
         return this.currentArray.filter(
-            (value) => !toJson(this.otherArray).includes(JSON.stringify(value))
+            (value) => !otherArray.includes(JSON.stringify(value))
         );
     }
 
@@ -17,10 +18,11 @@ class Diff {
         if (!this.total) {
             return [];
         }
+        const currentArray = toJson(this.currentArray)
 
         return this.otherArray.filter(
             (value) =>
-                !toJson(this.currentArray).includes(JSON.stringify(value))
+                !currentArray.includes(JSON.stringify(value))
         );
     }
 
