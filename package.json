@@ -1,6 +1,6 @@
 {
     "name": "@hckrnews/arrays",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "Usefull array helpers.",
     "files": [
         "src/helpers.js",
@@ -44,7 +44,7 @@
     "scripts": {
         "lint": "eslint src/*.js --config .eslintrc",
         "lint:fix": "eslint src/*.js --config .eslintrc --fix",
-        "test": "c8 node --test test/",
+        "test": "c8 --reporter=lcov --reporter=text node --test test/",
         "example": "node -r esm example/node.js",
         "cpd": "node_modules/jscpd/bin/jscpd src",
         "vulnerabilities": "npm audit --only=prod"
