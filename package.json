@@ -1,6 +1,6 @@
 {
     "name": "@hckrnews/arrays",
-    "version": "2.1.7",
+    "version": "3.0.0",
     "description": "Usefull array helpers.",
     "files": [
         "src/helpers.js",
@@ -44,23 +44,14 @@
     "scripts": {
         "lint": "eslint src/*.js --config .eslintrc",
         "lint:fix": "eslint src/*.js --config .eslintrc --fix",
-        "test": "jest",
-        "test:watch": "jest src --watch",
+        "test": "c8 node --test test/",
         "example": "node -r esm example/node.js",
-        "coveralls": "jest && codecov && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
         "cpd": "node_modules/jscpd/bin/jscpd src",
         "vulnerabilities": "npm audit --only=prod"
     },
     "devDependencies": {
-        "@babel/core": "^7.14.6",
-        "@babel/eslint-parser": "^7.14.7",
-        "@babel/plugin-transform-modules-commonjs": "^7.14.5",
-        "@babel/preset-env": "^7.14.7",
-        "@hckrnews/eslint-config": "^2.1.0",
-        "@jest/globals": "^28.1.0",
-        "babel-jest": "^28.1.0",
-        "codecov": "^3.8.1",
-        "coveralls": "^3.1.0",
+        "@hckrnews/eslint-config": "^3.0.0",
+        "c8": "^7.11.3",
         "eslint": "^8.3.0",
         "eslint-config-airbnb-base": "^15.0.0",
         "eslint-config-prettier": "^8.1.0",
@@ -68,12 +59,10 @@
         "eslint-plugin-import": "^2.22.1",
         "eslint-plugin-jsx-a11y": "^6.4.1",
         "eslint-plugin-prettier": "^4.0.0",
-        "esm": "^3.2.25",
-        "jest": "^28.1.0",
         "prettier": "^2.5.0"
     },
     "type": "module",
     "engines": {
-        "node": ">= 14"
+        "node": ">= 18"
     }
 }

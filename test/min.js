@@ -1,14 +1,18 @@
-import { expect, describe, it } from '@jest/globals';
+import test from 'node:test';
+import assert from 'assert';
 import { Arr } from '../src/helpers.js';
 
 const exampleArray = new Arr([1, 2, 3]);
 
-describe('Min', () => {
-    it('Should return the min, in this example should it be 1.', () => {
-        expect(1).toEqual(exampleArray.min);
-    });
+test('Min', async (t) => {
+    await t.test(
+        'Should return the min, in this example should it be 1.',
+        () => {
+            assert.strictEqual(exampleArray.min, 1);
+        }
+    );
 
-    it('Test an empty array', () => {
-        expect(null).toEqual(new Arr().min);
+    await t.test('Test an empty array', () => {
+        assert.strictEqual(new Arr().min, null);
     });
 });

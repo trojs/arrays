@@ -1,4 +1,5 @@
-import { expect, describe, it } from '@jest/globals';
+import test from 'node:test';
+import assert from 'assert';
 import { Arr } from '../src/helpers.js';
 
 const exampleArray = new Arr([
@@ -29,8 +30,8 @@ const exampleArray = new Arr([
 ]);
 
 const expectedResults = {
-    test1: JSON.stringify(['John', 'Peter', 'Luke', 'Paul']),
-    test2: JSON.stringify([
+    test1: ['John', 'Peter', 'Luke', 'Paul'],
+    test2: [
         {
             name: 'John',
             age: 93,
@@ -47,23 +48,27 @@ const expectedResults = {
             name: 'Paul',
             age: 62,
         },
-    ]),
+    ],
 };
 
-describe('Multikey', () => {
-    describe('Test 1 (single)', () => {
-        it('Should return the max, in this example should it be 3.', () => {
-            expect(expectedResults.test1).toEqual(
-                JSON.stringify(exampleArray.multikey('name'))
+test('Multikey', async (t) => {
+    await t.test(
+        'Test 1 (single): Should return the max, in this example should it be 3.',
+        () => {
+            assert.deepEqual(
+                expectedResults.test1,
+                exampleArray.multikey('name')
             );
-        });
-    });
+        }
+    );
 
-    describe('Test 2 (multiple)', () => {
-        it('Should return the max, in this example should it be 3.', () => {
-            expect(expectedResults.test2).toEqual(
-                JSON.stringify(exampleArray.multikey(['name', 'age']))
+    await t.test(
+        'Test 2 (multiple): Should return the max, in this example should it be 3.',
+        () => {
+            assert.deepEqual(
+                expectedResults.test2,
+                exampleArray.multikey(['name', 'age'])
             );
-        });
-    });
+        }
+    );
 });

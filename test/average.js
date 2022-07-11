@@ -1,12 +1,16 @@
-import { expect, describe, it } from '@jest/globals';
+import test from 'node:test';
+import assert from 'assert';
 import { Arr } from '../src/helpers.js';
 
-describe('Average', () => {
-    it('Should return the average, in this example should it be 2.', () => {
-        expect(new Arr([1, 2, 3]).average).toEqual(2);
-    });
+test('Average', async (t) => {
+    await t.test(
+        'Should return the average, in this example should it be 2.',
+        () => {
+            assert.strictEqual(new Arr([1, 2, 3]).average, 2);
+        }
+    );
 
-    it('Test an empty array', () => {
-        expect(new Arr([]).average).toEqual(null);
+    await t.test('Test an empty array', () => {
+        assert.strictEqual(new Arr([]).average, null);
     });
 });

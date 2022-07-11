@@ -1,4 +1,5 @@
-import { expect, describe, it } from '@jest/globals';
+import test from 'node:test';
+import assert from 'assert';
 import { Arr } from '../src/helpers.js';
 
 const a = new Arr();
@@ -8,18 +9,14 @@ const expectedResults = {
     test2: ['John', 'Peter', 'Luke', 'Paul'],
 };
 
-describe('Push if not exists', () => {
-    describe('Test 1', () => {
-        it('Should be return 2 item in the array.', () => {
-            a.pushMultiple(['John', 'Peter']);
-            expect(expectedResults.test1).toEqual(a);
-        });
+test('Push if not exists', async (t) => {
+    await t.test('Should be return 2 item in the array.', () => {
+        a.pushMultiple(['John', 'Peter']);
+        assert.deepEqual(a, expectedResults.test1);
     });
 
-    describe('Test 2', () => {
-        it('Should be return 4 item in the array.', () => {
-            a.pushMultiple(['Luke', 'Paul']);
-            expect(expectedResults.test2).toEqual(a);
-        });
+    await t.test('Should be return 4 item in the array.', () => {
+        a.pushMultiple(['Luke', 'Paul']);
+        assert.deepEqual(a, expectedResults.test2);
     });
 });

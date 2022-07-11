@@ -1,4 +1,5 @@
-import { expect, describe, it } from '@jest/globals';
+import test from 'node:test';
+import assert from 'assert';
 import { Arr } from '../src/helpers.js';
 
 const exampleArray = new Arr([
@@ -14,8 +15,8 @@ const exampleArray = new Arr([
     },
 ]);
 
-describe('Update', () => {
-    it('Update the last item', () => {
+test('Update', async (t) => {
+    await t.test('Update the last item', () => {
         const results = exampleArray.update(
             [
                 {
@@ -37,10 +38,10 @@ describe('Update', () => {
                 value: 'Y',
             },
         ];
-        expect(results).toEqual(expectedResults);
+        assert.deepEqual(results, expectedResults);
     });
 
-    it('Update the first item', () => {
+    await t.test('Update the first item', () => {
         const results = exampleArray.update(
             [
                 {
@@ -62,10 +63,10 @@ describe('Update', () => {
                 value: 'Y',
             },
         ];
-        expect(results).toEqual(expectedResults);
+        assert.deepEqual(results, expectedResults);
     });
 
-    it('Update both items', () => {
+    await t.test('Update both items', () => {
         const results = exampleArray.update(
             [
                 {
@@ -91,10 +92,10 @@ describe('Update', () => {
                 value: 'Y',
             },
         ];
-        expect(results).toEqual(expectedResults);
+        assert.deepEqual(results, expectedResults);
     });
 
-    it('Try to update unknown item', () => {
+    await t.test('Try to update unknown item', () => {
         const results = exampleArray.update(
             [
                 {
@@ -116,31 +117,34 @@ describe('Update', () => {
                 value: 'Y',
             },
         ];
-        expect(results).toEqual(expectedResults);
+        assert.deepEqual(results, expectedResults);
     });
 
-    it('Try to update unknown item because not all keys are correct', () => {
-        const results = exampleArray.update(
-            [
+    await t.test(
+        'Try to update unknown item because not all keys are correct',
+        () => {
+            const results = exampleArray.update(
+                [
+                    {
+                        id: 1,
+                        name: 'unknown',
+                    },
+                ],
+                ['id', 'name']
+            );
+            const expectedResults = [
                 {
                     id: 1,
-                    name: 'unknown',
+                    name: 'first',
+                    value: 'X',
                 },
-            ],
-            ['id', 'name']
-        );
-        const expectedResults = [
-            {
-                id: 1,
-                name: 'first',
-                value: 'X',
-            },
-            {
-                id: 2,
-                name: 'second',
-                value: 'Y',
-            },
-        ];
-        expect(results).toEqual(expectedResults);
-    });
+                {
+                    id: 2,
+                    name: 'second',
+                    value: 'Y',
+                },
+            ];
+            assert.deepEqual(results, expectedResults);
+        }
+    );
 });
