@@ -45,7 +45,7 @@
         "lint": "eslint src/*.js --config .eslintrc",
         "lint:report": "eslint src/*.js --config .eslintrc -f json -o report.json",
         "lint:fix": "eslint src/*.js --config .eslintrc --fix",
-        "test": "c8 --reporter=lcov --reporter=text node --test test/",
+        "test": "c8 node --test test/",
         "example": "node -r esm example/node.js",
         "cpd": "node_modules/jscpd/bin/jscpd src",
         "vulnerabilities": "npm audit --only=prod"
