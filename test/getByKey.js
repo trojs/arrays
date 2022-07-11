@@ -1,4 +1,5 @@
-import { expect, describe, it } from '@jest/globals';
+import test from 'node:test';
+import assert from 'assert';
 import { Arr } from '../src/helpers.js';
 
 const getTestCases = [
@@ -27,12 +28,18 @@ const getTestCases = [
     },
 ];
 
-describe.each(getTestCases)(
-    'Test Arr.Get',
-    ({ description, arr, key, defaultValue, expectedValue }) => {
-        it(description, () => {
-            const a = new Arr(arr);
-            expect(a.getByKey(key, defaultValue)).toEqual(expectedValue);
-        });
-    }
-);
+test('Test Arr.Get', async (t) => {
+    await Promise.all(
+        getTestCases.map(
+            async ({ description, arr, key, defaultValue, expectedValue }) => {
+                await t.test(description, () => {
+                    const a = new Arr(arr);
+                    assert.deepEqual(
+                        a.getByKey(key, defaultValue),
+                        expectedValue
+                    );
+                });
+            }
+        )
+    );
+});

@@ -1,4 +1,5 @@
-import { expect, describe, it } from '@jest/globals';
+import test from 'node:test';
+import assert from 'assert';
 import { Arr } from '../src/helpers.js';
 
 const exampleArray = new Arr([
@@ -29,7 +30,7 @@ const exampleArray = new Arr([
 ]);
 
 const expectedResults = {
-    test1: JSON.stringify([
+    test1: [
         {
             id: 1,
             name: 'Peter',
@@ -54,8 +55,8 @@ const expectedResults = {
             age: 93,
             city: 'Patmos',
         },
-    ]),
-    test2: JSON.stringify([
+    ],
+    test2: [
         {
             id: 0,
             name: 'John',
@@ -80,8 +81,8 @@ const expectedResults = {
             age: 62,
             city: 'Rome',
         },
-    ]),
-    test3: JSON.stringify([
+    ],
+    test3: [
         {
             id: 0,
             name: 'John',
@@ -106,33 +107,39 @@ const expectedResults = {
             age: 62,
             city: 'Rome',
         },
-    ]),
+    ],
 };
 
 exampleArray.multisort('age', 'desc');
 
-describe('Multisort', () => {
-    describe('Test 1 (ASC)', () => {
-        it('Should return the array, sorted by age asc.', () => {
-            expect(expectedResults.test1).toEqual(
-                JSON.stringify(exampleArray.multisort('age', 'asc'))
+test('Multisort', async (t) => {
+    await t.test(
+        'Test 1 (ASC): Should return the array, sorted by age asc.',
+        () => {
+            assert.deepEqual(
+                expectedResults.test1,
+                exampleArray.multisort('age', 'asc')
             );
-        });
-    });
+        }
+    );
 
-    describe('Test 1 (DESC)', () => {
-        it('Should return the array, sorted by age desc.', () => {
-            expect(expectedResults.test2).toEqual(
-                JSON.stringify(exampleArray.multisort('age', 'desc'))
+    await t.test(
+        'Test 2 (DESC): Should return the array, sorted by age desc.',
+        () => {
+            assert.deepEqual(
+                expectedResults.test2,
+                exampleArray.multisort('age', 'desc')
             );
-        });
-    });
+        }
+    );
 
-    describe('Test 3 (sort text ASC)', () => {
-        it('Should return the array, sorted by age asc.', () => {
-            expect(expectedResults.test3).toEqual(
-                JSON.stringify(exampleArray.multisort('name', 'asc'))
+    await t.test(
+        'Test 3 (sort text ASC): Should return the array, sorted by age asc.',
+        () => {
+            assert.deepEqual(
+                expectedResults.test3,
+                exampleArray.multisort('name', 'asc')
             );
-        });
-    });
+        }
+    );
 });

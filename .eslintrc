@@ -22,11 +22,7 @@
         "jquery": false,
         "browser": true
     },
-    "parser": "@babel/eslint-parser",
     "parserOptions": {
-        "sourceType": "module",
-        "babelOptions": {
-            "configFile": "./babel.config.cjs"
-        }
+        "sourceType": "module"
     },
 }
