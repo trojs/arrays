@@ -1,4 +1,4 @@
-name: Node Lint
+name: Node Vulnerability Check
 
 on: [push]
 
@@ -17,6 +17,6 @@ jobs:
     - name: npm lint
       run: |
         npm ci
-        npm run lint
+        npm run vulnerabilities
       env:
         CI: true

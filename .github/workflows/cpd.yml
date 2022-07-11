@@ -1,4 +1,4 @@
-name: Node Lint
+name: Node Copy Paste Detector
 
 on: [push]
 
@@ -17,6 +17,6 @@ jobs:
     - name: npm lint
       run: |
         npm ci
-        npm run lint
+        npm run cpd
       env:
         CI: true
