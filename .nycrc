@@ -1,28 +1,33 @@
 {
-  "all": true,
-  "include": [
-    "src/**/*.js"
-  ],
-  "exclude": [
-    "**/*.spec.js"
-  ],
-  "check-coverage": true,
-  "watermarks": {
-    "lines": [
-      80,
-      95
+    "all": true,
+    "include": [
+        "src/**/*.js"
     ],
-    "functions": [
-      80,
-      95
+    "exclude": [
+        "**/*.spec.js"
     ],
-    "branches": [
-      80,
-      95
+    "reporter": [
+        "text",
+        "lcov",
+        "clover"
     ],
-    "statements": [
-      80,
-      95
-    ]
-  }
+    "check-coverage": true,
+    "watermarks": {
+        "lines": [
+            80,
+            95
+        ],
+        "functions": [
+            80,
+            95
+        ],
+        "branches": [
+            80,
+            95
+        ],
+        "statements": [
+            80,
+            95
+        ]
+    }
 }

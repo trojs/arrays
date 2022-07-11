@@ -105,3 +105,4 @@ dist
 
 .dccache
 .DS_STORE
+report.json
