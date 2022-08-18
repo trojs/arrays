@@ -1,6 +1,7 @@
 import min from './min.js';
 import max from './max.js';
 
+const isNotOperator = (operator) => (operator === '!=' || operator === '<>')
 class Match {
     constructor(find, operator) {
         this.find = find;
@@ -22,7 +23,7 @@ class Match {
         const hasMin = minValue !== null;
 
         const notOperator =
-            find && (this.operator === '!=' || this.operator === '<>');
+            find && isNotOperator(this.operator);
         const noInput = !find && !this.operator;
         const gtOperator =
             ((value > maxValue && hasMax) || value > this.find) &&
