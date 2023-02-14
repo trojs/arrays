@@ -26,7 +26,7 @@ class Arr extends Array {
      * Sort a multiarray.
      *
      * @param {string} key
-     * @param {string} direction
+     * @param {string=} direction
      *
      * @return {array}
      */
@@ -39,7 +39,7 @@ class Arr extends Array {
      *
      * @param {string}  key
      * @param {string}  find
-     * @param {boolean} operator
+     * @param {boolean=} operator
      *
      * @return {array}
      */
@@ -62,7 +62,7 @@ class Arr extends Array {
      * Get the intersection of arrays.
      *
      * @param {string}  array
-     * @param {boolean} multi
+     * @param {boolean=} multi
      *
      * @return {array}
      */
@@ -74,7 +74,7 @@ class Arr extends Array {
      * Get the difference of arrays.
      *
      * @param {string}  array
-     * @param {boolean} total
+     * @param {boolean=} total
      *
      * @return {array}
      */
