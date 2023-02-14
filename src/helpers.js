@@ -28,7 +28,7 @@ class Arr extends Array {
      * @param {string} key
      * @param {string=} direction
      *
-     * @return {array}
+     * @return {any[]}
      */
     multisort(key, direction) {
         return multisort(this[0], key, direction);
@@ -41,7 +41,7 @@ class Arr extends Array {
      * @param {string}  find
      * @param {boolean=} operator
      *
-     * @return {array}
+     * @return {any[]}
      */
     multifilter(key, find, operator) {
         return multifilter(this[0], key, find, operator);
@@ -52,7 +52,7 @@ class Arr extends Array {
      *
      * @param {string} key
      *
-     * @return {array}
+     * @return {any[]}
      */
     multikey(key) {
         return multikey(this[0], key);
@@ -61,10 +61,10 @@ class Arr extends Array {
     /**
      * Get the intersection of arrays.
      *
-     * @param {string}  array
+     * @param {any[]}  array
      * @param {boolean=} multi
      *
-     * @return {array}
+     * @return {any[]}
      */
     intersect(array, multi) {
         return intersect(this[0], array, multi);
@@ -73,10 +73,10 @@ class Arr extends Array {
     /**
      * Get the difference of arrays.
      *
-     * @param {string}  array
+     * @param {any[]}  array
      * @param {boolean=} total
      *
-     * @return {array}
+     * @return {any[]}
      */
     diff(array, total) {
         return diff(this[0], array, total);
@@ -85,7 +85,7 @@ class Arr extends Array {
     /**
      * Get the unique values of an array.
      *
-     * @return {array}
+     * @return {any[]}
      */
     get unique() {
         return unique(this[0]);
@@ -94,9 +94,9 @@ class Arr extends Array {
     /**
      * Only add the value if the value isnt in the array.
      *
-     * @param {string} newValue
+     * @param {any} newValue
      *
-     * @return {int}
+     * @return {number}
      */
     pushIfNotExists(newValue) {
         if (this.indexOf(newValue) < 0) {
@@ -109,9 +109,9 @@ class Arr extends Array {
     /**
      * Add multiple values to an array.
      *
-     * @param {array} newValues
+     * @param {any[]} newValues
      *
-     * @return {int}
+     * @return {number}
      */
     pushMultiple(newValues) {
         this.push(...newValues);
@@ -123,9 +123,9 @@ class Arr extends Array {
      * Add multiple values to an array.
      * Only add the value if the value isnt in the array.
      *
-     * @param {array} newValues
+     * @param {any[]} newValues
      *
-     * @return {int}
+     * @return {number}
      */
     pushMultipleIfNotExists(newValues) {
         const array = this;
@@ -142,7 +142,7 @@ class Arr extends Array {
      * If at least one of the arguments cannot be converted to a number,
      * NaN is returned.
      *
-     * @return {int}
+     * @return {number}
      */
     get max() {
         return max(this[0]);
@@ -153,7 +153,7 @@ class Arr extends Array {
      * If at least one of the arguments cannot be converted to a number,
      * NaN is returned.
      *
-     * @return {int}
+     * @return {number}
      */
     get min() {
         return min(this[0]);
@@ -162,7 +162,7 @@ class Arr extends Array {
     /**
      * Get a random value of an array.
      *
-     * @return {string}
+     * @return {any}
      */
     get random() {
         return random(this);
@@ -171,7 +171,7 @@ class Arr extends Array {
     /**
      * The summ of all values.
      *
-     * @return {int}
+     * @return {number}
      */
     get summ() {
         return summ(this[0]);
@@ -180,7 +180,7 @@ class Arr extends Array {
     /**
      * Get the average of all values.
      *
-     * @return {int}
+     * @return {number}
      */
     get average() {
         return average(this[0]);
@@ -190,9 +190,9 @@ class Arr extends Array {
      * Javascript implementation of Arr::get
      *
      * @param {string} key
-     * @param {object|null} defaultValue
+     * @param {object=} defaultValue
      *
-     * @return {object|null}
+     * @return {any|undefined}
      */
     getByKey(key, defaultValue) {
         return getByKey(this[0], key, defaultValue);
@@ -201,7 +201,7 @@ class Arr extends Array {
     /**
      * Javascript implementation of Arr::first
      *
-     * @return {object|null}
+     * @return {any|undefined}
      */
     get first() {
         return first(this[0]);
@@ -210,7 +210,7 @@ class Arr extends Array {
     /**
      * Javascript implementation of Arr::last
      *
-     * @return {object|null}
+     * @return {any|undefined}
      */
     get last() {
         return last(this[0]);
@@ -219,10 +219,10 @@ class Arr extends Array {
     /**
      * Update multiple items in an array
      *
-     * @param {array} newValues
-     * @param {array} keys
+     * @param {any[]} newValues
+     * @param {string[]} keys
      *
-     * @return {array}
+     * @return {any[]}
      */
     update(newValues, keys) {
         return update(this[0], newValues, keys);

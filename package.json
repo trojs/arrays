@@ -1,6 +1,6 @@
 {
     "name": "@hckrnews/arrays",
-    "version": "3.0.4",
+    "version": "3.0.5",
     "description": "Usefull array helpers.",
     "files": [
         "src/helpers.js",
@@ -66,5 +66,9 @@
     "type": "module",
     "engines": {
         "node": ">= 18"
+    },
+    "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/w3nl"
     }
 }
