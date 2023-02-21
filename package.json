@@ -69,7 +69,7 @@
         "example": "node example/node.js",
         "cpd": "node_modules/jscpd/bin/jscpd src",
         "vulnerabilities": "npm audit --production",
-        "build": "microbundle --target node src/objects.js"
+        "build": "microbundle --target node src/helpers.js"
     },
     "devDependencies": {
         "@hckrnews/eslint-config": "^3.0.0",
