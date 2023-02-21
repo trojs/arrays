@@ -1,6 +1,6 @@
 {
     "name": "@hckrnews/arrays",
-    "version": "3.0.5",
+    "version": "3.1.0",
     "description": "Usefull array helpers.",
     "files": [
         "src/helpers.js",
@@ -19,10 +19,30 @@
         "src/modules/summ.js",
         "src/modules/toJson.js",
         "src/modules/unique.js",
-        "src/modules/update.js"
+        "src/modules/update.js",
+        "dist/helpers.cjs",
+        "dist/helpers.cjs.map",
+        "dist/helpers.js",
+        "dist/helpers.js.map",
+        "dist/helpers.module.mjs",
+        "dist/helpers.module.mjs.map",
+        "dist/helpers.umd.cjs",
+        "dist/helpers.umd.cjs.map"
     ],
+    "main": "dist/helpers.umd.cjs",
     "source": "src/helpers.js",
-    "main": "src/helpers.js",
+    "module": "dist/helpers.module.mjs",
+    "unpkg": "dist/helpers.umd.cjs",
+    "umd:main": "dist/helpers.umd.cjs",
+    "exports": {
+        "node": {
+            "default": "./dist/helpers.umd.cjs",
+            "module": "./src/helpers.js",
+            "require": "./dist/helpers.umd.cjs"
+        },
+        "require": "./dist/helpers.umd.cjs",
+        "default": "./dist/helpers.umd.cjs"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/hckrnews/arrays.git"
@@ -48,7 +68,8 @@
         "test": "c8 node --test test/",
         "example": "node example/node.js",
         "cpd": "node_modules/jscpd/bin/jscpd src",
-        "vulnerabilities": "npm audit --production"
+        "vulnerabilities": "npm audit --production",
+        "build": "microbundle --target node src/objects.js"
     },
     "devDependencies": {
         "@hckrnews/eslint-config": "^3.0.0",
@@ -61,6 +82,7 @@
         "eslint-plugin-jsx-a11y": "^6.4.1",
         "eslint-plugin-prettier": "^4.0.0",
         "jscpd": "^3.4.5",
+        "microbundle": "^0.15.1",
         "prettier": "^2.5.0"
     },
     "type": "module",
