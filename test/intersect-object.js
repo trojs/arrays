@@ -11,7 +11,8 @@ test('Intersect array with objects', async (t) => {
         'One side: Should return the intersect, in this example should it be Peter and Luke.',
         () => {
             assert.deepEqual(a.intersect(b), [
-                [{ name: 'Peter' }, { name: 'Luke' }],
+                { name: 'Peter' },
+                { name: 'Luke' },
             ]);
         }
     );
