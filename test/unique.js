@@ -10,7 +10,7 @@ test('Unique', async (t) => {
     await t.test(
         'Should return the unique items from the array, in this example 4 items.',
         () => {
-            assert.deepEqual(expectedResults, a.unique);
+            assert.deepEqual(a.unique, expectedResults);
         }
     );
 });

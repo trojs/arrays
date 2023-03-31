@@ -56,8 +56,8 @@ test('Multikey', async (t) => {
         'Test 1 (single): Should return the max, in this example should it be 3.',
         () => {
             assert.deepEqual(
-                expectedResults.test1,
-                exampleArray.multikey('name')
+                exampleArray.multikey('name'),
+                expectedResults.test1
             );
         }
     );
@@ -66,8 +66,8 @@ test('Multikey', async (t) => {
         'Test 2 (multiple): Should return the max, in this example should it be 3.',
         () => {
             assert.deepEqual(
-                expectedResults.test2,
-                exampleArray.multikey(['name', 'age'])
+                exampleArray.multikey(['name', 'age']),
+                expectedResults.test2
             );
         }
     );
