@@ -9,17 +9,17 @@ test('Diff array with objects', async (t) => {
     await t.test(
         'One side: Should return the difference, in this example should it be John.',
         () => {
-            assert.deepEqual([{ name: 'John' }], a.diff(b));
+            assert.deepEqual(a.diff(b), [{ name: 'John' }]);
         }
     );
 
     await t.test(
         'Average both sides: Should return the difference of both sides, in this example should it be John and Paul.',
         () => {
-            assert.deepEqual(
-                [{ name: 'John' }, { name: 'Paul' }],
-                a.diff(b, true)
-            );
+            assert.deepEqual(a.diff(b, true), [
+                { name: 'John' },
+                { name: 'Paul' },
+            ]);
         }
     );
 });

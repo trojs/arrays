@@ -237,8 +237,8 @@ test('Test 1 (==)', async (t) => {
         'Should return 2 items from the array, where age is 62.',
         () => {
             assert.deepEqual(
-                expectedResults.test1,
-                exampleArray.multifilter('age', 62)
+                exampleArray.multifilter('age', 62),
+                expectedResults.test1
             );
         }
     );
@@ -249,8 +249,8 @@ test('Test 2 (!=)', async (t) => {
         'Should return 2 items from the array, where age is not 62.',
         () => {
             assert.deepEqual(
-                expectedResults.test2,
-                exampleArray.multifilter('age', 62, '!=')
+                exampleArray.multifilter('age', 62, '!='),
+                expectedResults.test2
             );
         }
     );
@@ -261,8 +261,8 @@ test('Test 3 (>)', async (t) => {
         'Should return 2 items from the array, where age is more than 62.',
         () => {
             assert.deepEqual(
-                expectedResults.test3,
-                exampleArray.multifilter('age', 62, '>')
+                exampleArray.multifilter('age', 62, '>'),
+                expectedResults.test3
             );
         }
     );
@@ -309,8 +309,8 @@ test('Test 7 (multiple ==)', async (t) => {
         'Should return 2 items from the array, where the name is John or Peter.',
         () => {
             assert.deepEqual(
-                expectedResults.test7,
-                exampleArray.multifilter('name', ['John', 'Peter'])
+                exampleArray.multifilter('name', ['John', 'Peter']),
+                expectedResults.test7
             );
         }
     );
@@ -321,8 +321,8 @@ test('Test 8 (multiple !=)', async (t) => {
         'Should return 2 items from the array, where the name is not John or Peter.',
         () => {
             assert.deepEqual(
-                expectedResults.test8,
-                exampleArray.multifilter('name', ['John', 'Peter'], '!=')
+                exampleArray.multifilter('name', ['John', 'Peter'], '!='),
+                expectedResults.test8
             );
         }
     );
@@ -333,8 +333,8 @@ test('Test 9 (multiple >)', async (t) => {
         'Should return 2 items from the array, where age is more than 62 and 63.',
         () => {
             assert.deepEqual(
-                expectedResults.test9,
-                exampleArray.multifilter('age', ['62', '63'], '>')
+                exampleArray.multifilter('age', ['62', '63'], '>'),
+                expectedResults.test9
             );
         }
     );

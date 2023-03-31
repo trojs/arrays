@@ -10,13 +10,13 @@ test('Intersect', async (t) => {
     await t.test(
         'One side: Should return the intersect, in this example should it be Peter and Luke.',
         () => {
-            assert.deepEqual(['Peter', 'Luke'], a.intersect(b));
+            assert.deepEqual(a.intersect(b), ['Peter', 'Luke']);
         }
     );
     await t.test(
         'Average both sides: Should return the intersect of more than 2 arrays, in this example should it be Luke.',
         () => {
-            assert.deepEqual(['Luke'], a.intersect([b, c], true));
+            assert.deepEqual(a.intersect([b, c], true), ['Luke']);
         }
     );
 });

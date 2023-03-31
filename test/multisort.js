@@ -117,8 +117,8 @@ test('Multisort', async (t) => {
         'Test 1 (ASC): Should return the array, sorted by age asc.',
         () => {
             assert.deepEqual(
-                expectedResults.test1,
-                exampleArray.multisort('age', 'asc')
+                exampleArray.multisort('age', 'asc'),
+                expectedResults.test1
             );
         }
     );
@@ -127,8 +127,8 @@ test('Multisort', async (t) => {
         'Test 2 (DESC): Should return the array, sorted by age desc.',
         () => {
             assert.deepEqual(
-                expectedResults.test2,
-                exampleArray.multisort('age', 'desc')
+                exampleArray.multisort('age', 'desc'),
+                expectedResults.test2
             );
         }
     );
@@ -137,8 +137,8 @@ test('Multisort', async (t) => {
         'Test 3 (sort text ASC): Should return the array, sorted by age asc.',
         () => {
             assert.deepEqual(
-                expectedResults.test3,
-                exampleArray.multisort('name', 'asc')
+                exampleArray.multisort('name', 'asc'),
+                expectedResults.test3
             );
         }
     );
