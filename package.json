@@ -1,6 +1,6 @@
 {
     "name": "@hckrnews/arrays",
-    "version": "3.1.7",
+    "version": "3.1.8",
     "description": "Usefull array helpers.",
     "files": [
         "src/helpers.js",
