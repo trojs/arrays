@@ -38,8 +38,8 @@ class Arr extends Array {
      * Filter a multi array.
      *
      * @param {string}  key
-     * @param {string}  find
-     * @param {boolean=} operator
+     * @param {any}  find
+     * @param {(boolean|string)=} operator
      *
      * @return {any[]}
      */
@@ -50,7 +50,7 @@ class Arr extends Array {
     /**
      * Only get some keys of a multi array.
      *
-     * @param {string} key
+     * @param {string|string[]} key
      *
      * @return {any[]}
      */
