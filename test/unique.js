@@ -1,5 +1,5 @@
 import test from 'node:test';
-import assert from 'assert';
+import assert from 'node:assert';
 import { Arr } from '../src/helpers.js';
 
 const a = new Arr(['John', 'Peter', 'Luke', 'Peter', 'Luke', 'Paul']);

@@ -3,5 +3,5 @@ export default function last(originalArray) {
         return null;
     }
 
-    return originalArray[originalArray.length - 1];
+    return originalArray.at(-1);
 }

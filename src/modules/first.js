@@ -3,5 +3,5 @@ export default function first(originalArray) {
         return null;
     }
 
-    return originalArray[0];
+    return originalArray.at(0);
 }
