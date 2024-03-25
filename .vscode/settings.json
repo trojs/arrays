@@ -1,0 +1,73 @@
+{
+  "eslint.codeActionsOnSave.rules": [
+    "*"
+  ],
+  "editor.formatOnSave": true,
+  "coverage-gutters.coverageFileNames": [
+    "lcov.info",
+    "cov.xml",
+    "coverage.xml",
+    "jacoco.xml",
+    "coverage.cobertura.xml"
+  ],
+  "eslint.notebooks.rules.customizations": [],
+  "debug.javascript.debugByLinkOptions": "on",
+  "markdown-preview-enhanced.mathBlockDelimiters": [
+    [
+      "$$",
+      "$$"
+    ],
+    [
+      "\\[",
+      "\\]"
+    ]
+  ],
+  "npm.exclude": "",
+  "npm.packageManager": "npm",
+  "npm.enableRunFromFolder": true,
+  "npm.enableTouchbar": true,
+  "lcov.path": "coverage/lcov.info",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[scss]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.format.enable": true,
+  "eslint.options": {
+    "resolvePluginsRelativeTo": ".",
+  },
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "eslint.useESLintClass": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "eslint.run": "onSave",
+  "files.exclude": {
+    ".idea": true
+  },
+  "git.autofetch": true,
+  "files.watcherExclude": {
+    ".npmrc": true
+  },
+  "javascript.format.enable": false
+}

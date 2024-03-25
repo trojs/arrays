@@ -1,9 +1,13 @@
 {
+    "root": true,
     "extends": [
         "@hckrnews/eslint-config"
     ],
     "plugins": [
-        "import"
+        "import",
+        "jsdoc",
+        "n",
+        "sonarjs"
     ],
     "rules": {
         "import/extensions": [
