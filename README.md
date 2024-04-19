@@ -1,6 +1,6 @@
 # Array Helpers
 
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-stats] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Codecov Status][codecov-image]][codecov-url] [![Scrutinizer Code Quality][scrutinizer-image]][scrutinizer-url]
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-stats]
 
 Array helpers, so you can get very fast your data from the array.
 
@@ -9,7 +9,6 @@ Array helpers, so you can get very fast your data from the array.
 If it has saved you development time, please consider [sponsoring the project](https://github.com/sponsors/w3nl)
 with GitHub sponsors!
 
-But me a coffee/book: https://www.buymeacoffee.com/hckrnews
 Or on patreon: https://patreon.com/w3news
 
 ## Example usage
@@ -17,7 +16,7 @@ Or on patreon: https://patreon.com/w3news
 here an example array.
 
 ```javascript
-import { Arr } from '@hckrnews/arrays';
+import { Arr } from '@trojs/arrays';
 
 var exampleArray = new Arr([
     {
@@ -544,16 +543,16 @@ npm run lint
 
 ## node.js
 
-To include @hckrnews/arrays in Node, first install with npm.
+To include @trojs/arrays in Node, first install with npm.
 
 ```
-npm install @hckrnews/arrays
+npm install @trojs/arrays
 ```
 
 Use the package in your node files.
 
 ```javascript
-import { Arr } from '@hckrnews/arrays';
+import { Arr } from '@trojs/arrays';
 ```
 
 Than you can use all array helpers from this package in your node files.
@@ -561,15 +560,7 @@ Than you can use all array helpers from this package in your node files.
 An example is included `example/node.js`
 
 
-[downloads-image]: https://img.shields.io/npm/dm/@hckrnews/arrays.svg
-[npm-url]: https://www.npmjs.com/package/@hckrnews/arrays
-[npm-image]: https://img.shields.io/npm/v/@hckrnews/arrays.svg
-[npm-stats]: https://npm-stat.com/charts.html?package=@hckrnews/arrays
-[travis-url]: https://www.travis-ci.com/github/hckrnews/arrays
-[travis-image]: https://www.travis-ci.com/hckrnews/arrays.svg?branch=main
-[coveralls-url]: https://coveralls.io/r/hckrnews/arrays
-[coveralls-image]: https://img.shields.io/coveralls/hckrnews/arrays/master.svg
-[codecov-url]: https://app.codecov.io/gh/hckrnews/arrays
-[codecov-image]: https://img.shields.io/codecov/c/github/hckrnews/arrays.svg
-[scrutinizer-url]: https://scrutinizer-ci.com/g/hckrnews/arrays/?branch=master
-[scrutinizer-image]: https://scrutinizer-ci.com/g/hckrnews/arrays/badges/quality-score.png?b=main
+[downloads-image]: https://img.shields.io/npm/dm/@trojs/arrays.svg
+[npm-url]: https://www.npmjs.com/package/@trojs/arrays
+[npm-image]: https://img.shields.io/npm/v/@trojs/arrays.svg
+[npm-stats]: https://npm-stat.com/charts.html?package=@trojs/arrays

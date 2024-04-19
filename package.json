@@ -1,6 +1,6 @@
 {
-    "name": "@hckrnews/arrays",
-    "version": "4.0.4",
+    "name": "@trojs/arrays",
+    "version": "5.0.0",
     "description": "Usefull array helpers.",
     "files": [
         "src/helpers.js",
@@ -35,7 +35,7 @@
     ],
     "author": {
         "name": "Pieter Wigboldus",
-        "url": "https://hckr.news/"
+        "url": "https://trojs.org/"
     },
     "bugs": {
         "url": "https://github.com/hckrnews/arrays/issues"
