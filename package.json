@@ -73,6 +73,6 @@
         "url": "https://github.com/sponsors/w3nl"
     },
     "overrides": {
-        "xml2js": "^0.5.0"
+        "xml2js": "^0.6.0"
     }
 }
