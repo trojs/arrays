@@ -24,11 +24,9 @@ class Arr extends Array {
 
     /**
      * Sort a multiarray.
-     *
      * @param {string} key
      * @param {string=} direction
-     *
-     * @return {any[]}
+     * @returns {any[]}
      */
     multisort(key, direction) {
         return multisort(this[0], key, direction);
@@ -36,12 +34,10 @@ class Arr extends Array {
 
     /**
      * Filter a multi array.
-     *
      * @param {string}  key
      * @param {any}  find
      * @param {(boolean|string)=} operator
-     *
-     * @return {any[]}
+     * @returns {any[]}
      */
     multifilter(key, find, operator) {
         return multifilter(this[0], key, find, operator);
@@ -49,10 +45,8 @@ class Arr extends Array {
 
     /**
      * Only get some keys of a multi array.
-     *
      * @param {string|string[]} key
-     *
-     * @return {any[]}
+     * @returns {any[]}
      */
     multikey(key) {
         return multikey(this[0], key);
@@ -60,11 +54,9 @@ class Arr extends Array {
 
     /**
      * Get the intersection of arrays.
-     *
      * @param {any[]}  array
      * @param {boolean=} multi
-     *
-     * @return {any[]}
+     * @returns {any[]}
      */
     intersect(array, multi) {
         return intersect(this[0], array, multi);
@@ -72,11 +64,9 @@ class Arr extends Array {
 
     /**
      * Get the difference of arrays.
-     *
      * @param {any[]}  array
      * @param {boolean=} total
-     *
-     * @return {any[]}
+     * @returns {any[]}
      */
     diff(array, total) {
         return diff(this[0], array, total);
@@ -84,8 +74,7 @@ class Arr extends Array {
 
     /**
      * Get the unique values of an array.
-     *
-     * @return {any[]}
+     * @returns {any[]}
      */
     get unique() {
         return unique(this[0]);
@@ -93,10 +82,8 @@ class Arr extends Array {
 
     /**
      * Only add the value if the value isnt in the array.
-     *
      * @param {any} newValue
-     *
-     * @return {number}
+     * @returns {number}
      */
     pushIfNotExists(newValue) {
         if (this.indexOf(newValue) < 0) {
@@ -108,10 +95,8 @@ class Arr extends Array {
 
     /**
      * Add multiple values to an array.
-     *
      * @param {any[]} newValues
-     *
-     * @return {number}
+     * @returns {number}
      */
     pushMultiple(newValues) {
         this.push(...newValues);
@@ -122,10 +107,8 @@ class Arr extends Array {
     /**
      * Add multiple values to an array.
      * Only add the value if the value isnt in the array.
-     *
      * @param {any[]} newValues
-     *
-     * @return {number}
+     * @returns {number}
      */
     pushMultipleIfNotExists(newValues) {
         const array = this;
@@ -141,8 +124,7 @@ class Arr extends Array {
      * The largest of the given numbers.
      * If at least one of the arguments cannot be converted to a number,
      * NaN is returned.
-     *
-     * @return {number}
+     * @returns {number}
      */
     get max() {
         return max(this[0]);
@@ -152,8 +134,7 @@ class Arr extends Array {
      * The smallest of the given numbers.
      * If at least one of the arguments cannot be converted to a number,
      * NaN is returned.
-     *
-     * @return {number}
+     * @returns {number}
      */
     get min() {
         return min(this[0]);
@@ -161,8 +142,7 @@ class Arr extends Array {
 
     /**
      * Get a random value of an array.
-     *
-     * @return {any}
+     * @returns {any}
      */
     get random() {
         return random(this);
@@ -170,8 +150,7 @@ class Arr extends Array {
 
     /**
      * The summ of all values.
-     *
-     * @return {number}
+     * @returns {number}
      */
     get summ() {
         return summ(this[0]);
@@ -179,8 +158,7 @@ class Arr extends Array {
 
     /**
      * Get the average of all values.
-     *
-     * @return {number}
+     * @returns {number}
      */
     get average() {
         return average(this[0]);
@@ -188,11 +166,9 @@ class Arr extends Array {
 
     /**
      * Javascript implementation of Arr::get
-     *
      * @param {string} key
      * @param {object=} defaultValue
-     *
-     * @return {any|undefined}
+     * @returns {any|undefined}
      */
     getByKey(key, defaultValue) {
         return getByKey(this[0], key, defaultValue);
@@ -200,8 +176,7 @@ class Arr extends Array {
 
     /**
      * Javascript implementation of Arr::first
-     *
-     * @return {any|undefined}
+     * @returns {any|undefined}
      */
     get first() {
         return first(this[0]);
@@ -209,8 +184,7 @@ class Arr extends Array {
 
     /**
      * Javascript implementation of Arr::last
-     *
-     * @return {any|undefined}
+     * @returns {any|undefined}
      */
     get last() {
         return last(this[0]);
@@ -218,11 +192,9 @@ class Arr extends Array {
 
     /**
      * Update multiple items in an array
-     *
      * @param {any[]} newValues
      * @param {string[]} keys
-     *
-     * @return {any[]}
+     * @returns {any[]}
      */
     update(newValues, keys) {
         return update(this[0], newValues, keys);
