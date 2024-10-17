@@ -1,6 +1,6 @@
 {
     "name": "@trojs/arrays",
-    "version": "5.0.6",
+    "version": "5.0.7",
     "description": "Usefull array helpers.",
     "files": [
         "src/helpers.js",
