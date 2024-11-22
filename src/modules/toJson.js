@@ -1,1 +1,1 @@
-export default (items) => items.map((item) => JSON.stringify(item));
+export default (items) => items.map((item) => JSON.stringify(item))

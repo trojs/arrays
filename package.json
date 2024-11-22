@@ -1,6 +1,6 @@
 {
-    "name": "@hckrnews/arrays",
-    "version": "3.0.4",
+    "name": "@trojs/arrays",
+    "version": "6.0.0",
     "description": "Usefull array helpers.",
     "files": [
         "src/helpers.js",
@@ -21,11 +21,12 @@
         "src/modules/unique.js",
         "src/modules/update.js"
     ],
-    "source": "src/helpers.js",
     "main": "src/helpers.js",
+    "source": "src/helpers.js",
+    "module": "src/helpers.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/hckrnews/arrays.git"
+        "url": "https://github.com/trojs/arrays.git"
     },
     "keywords": [
         "javascript",
@@ -34,41 +35,55 @@
     ],
     "author": {
         "name": "Pieter Wigboldus",
-        "url": "https://hckr.news/"
+        "url": "https://trojs.org/"
     },
     "bugs": {
-        "url": "https://github.com/hckrnews/arrays/issues"
+        "url": "https://github.com/trojs/arrays/issues"
     },
     "license": "MIT",
-    "homepage": "https://github.com/hckrnews/arrays#readme",
+    "homepage": "https://github.com/trojs/arrays#readme",
     "scripts": {
-        "lint": "eslint src/*.js --config .eslintrc",
-        "lint:report": "eslint src/*.js --config .eslintrc -f json -o report.json",
-        "lint:fix": "eslint src/*.js --config .eslintrc --fix",
-        "test": "c8 node --test test/",
+        "lint": "eslint",
+        "lint:report": "eslint -f json -o report.json",
+        "lint:fix": "eslint --fix",
+        "test": "c8 node --test test/*.js",
         "example": "node example/node.js",
         "cpd": "node_modules/jscpd/bin/jscpd src",
         "vulnerabilities": "npm audit --production"
     },
     "devDependencies": {
-        "@hckrnews/eslint-config": "^3.0.0",
-        "c8": "^7.11.3",
-        "eslint": "^8.3.0",
-        "eslint-config-airbnb-base": "^15.0.0",
-        "eslint-config-prettier": "^8.1.0",
-        "eslint-plugin-html": "^6.1.2",
-        "eslint-plugin-import": "^2.22.1",
-        "eslint-plugin-jsx-a11y": "^6.4.1",
-        "eslint-plugin-prettier": "^4.0.0",
-        "jscpd": "^3.4.5",
-        "prettier": "^2.5.0"
+        "@eslint/js": "^9.15.0",
+        "@stylistic/eslint-plugin": "^2.11.0",
+        "@stylistic/eslint-plugin-js": "^2.11.0",
+        "c8": "^10.0.0",
+        "eslint": "^9.15.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-jsdoc": "^50.5.0",
+        "eslint-plugin-n": "^17.14.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-promise": "^7.1.0",
+        "eslint-plugin-sonarjs": "^2.0.4",
+        "globals": "^15.12.0",
+        "jscpd": "^4.0.0",
+        "prettier": "^3.2.5"
     },
     "type": "module",
     "engines": {
-        "node": ">= 18"
+        "node": ">= 20"
     },
     "funding": {
         "type": "github",
         "url": "https://github.com/sponsors/w3nl"
+    },
+    "overrides": {
+        "xml2js": "^0.6.0",
+        "eslint-plugin-sonarjs": {
+            "eslint": "^9.15.0",
+            "@typescript-eslint/eslint-plugin": "^8.0.0",
+            "@typescript-eslint/utils": "^8.0.0",
+            "eslint-plugin-import": "^2.31.0",
+            "eslint-plugin-react-hooks": "^5.0.0"
+        }
     }
 }

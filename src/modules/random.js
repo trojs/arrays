@@ -1,8 +1,9 @@
-export default function random(originalArray) {
-    const minimum = 0;
-    const maximum = originalArray.length;
-    const randomIndex =
-        Math.floor(Math.random() * (maximum - minimum)) + minimum;
+import { randomInt } from 'crypto'
 
-    return originalArray[randomIndex];
+export default function random(originalArray) {
+    const minimum = 0
+    const maximum = originalArray.length
+    const randomIndex = randomInt(minimum, maximum)
+
+    return originalArray[randomIndex]
 }

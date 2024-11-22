@@ -1,15 +1,15 @@
 export default function multikey(original, key) {
     return original.map((value) => {
-        const item = {};
+        const item = {}
 
         if (typeof key === 'object') {
             key.forEach((itemKey) => {
-                item[itemKey] = value[itemKey];
-            });
+                item[itemKey] = value[itemKey]
+            })
 
-            return item;
+            return item
         }
 
-        return value[key];
-    });
+        return value[key]
+    })
 }

@@ -1,33 +1,33 @@
-import test from 'node:test';
-import assert from 'assert';
-import { Arr } from '../src/helpers.js';
+import test from 'node:test'
+import assert from 'node:assert'
+import { Arr } from '../src/helpers.js'
 
 const exampleArray = new Arr([
     {
         id: 0,
         name: 'John',
         age: 93,
-        city: ['Patmos', 'Rome'],
+        city: ['Patmos', 'Rome']
     },
     {
         id: 1,
         name: 'Peter',
         age: 62,
-        city: 'Rome',
+        city: 'Rome'
     },
     {
         id: 2,
         name: 'Luke',
         age: 84,
-        city: 'Boeotia',
+        city: 'Boeotia'
     },
     {
         id: 2,
         name: 'Paul',
         age: 62,
-        city: 'Rome',
-    },
-]);
+        city: 'Rome'
+    }
+])
 
 const expectedResults = {
     test1: [
@@ -35,238 +35,238 @@ const expectedResults = {
             id: 1,
             name: 'Peter',
             age: 62,
-            city: 'Rome',
+            city: 'Rome'
         },
         {
             id: 2,
             name: 'Paul',
             age: 62,
-            city: 'Rome',
-        },
+            city: 'Rome'
+        }
     ],
     test2: [
         {
             id: 0,
             name: 'John',
             age: 93,
-            city: ['Patmos', 'Rome'],
+            city: ['Patmos', 'Rome']
         },
         {
             id: 2,
             name: 'Luke',
             age: 84,
-            city: 'Boeotia',
-        },
+            city: 'Boeotia'
+        }
     ],
     test3: [
         {
             id: 0,
             name: 'John',
             age: 93,
-            city: ['Patmos', 'Rome'],
+            city: ['Patmos', 'Rome']
         },
         {
             id: 2,
             name: 'Luke',
             age: 84,
-            city: 'Boeotia',
-        },
+            city: 'Boeotia'
+        }
     ],
     test4: [
         {
             id: 0,
             name: 'John',
             age: 93,
-            city: ['Patmos', 'Rome'],
+            city: ['Patmos', 'Rome']
         },
         {
             id: 2,
             name: 'Luke',
             age: 84,
-            city: 'Boeotia',
-        },
+            city: 'Boeotia'
+        }
     ],
     test5: [
         {
             id: 1,
             name: 'Peter',
             age: 62,
-            city: 'Rome',
+            city: 'Rome'
         },
         {
             id: 2,
             name: 'Paul',
             age: 62,
-            city: 'Rome',
-        },
+            city: 'Rome'
+        }
     ],
     test6: [
         {
             id: 1,
             name: 'Peter',
             age: 62,
-            city: 'Rome',
+            city: 'Rome'
         },
         {
             id: 2,
             name: 'Luke',
             age: 84,
-            city: 'Boeotia',
+            city: 'Boeotia'
         },
         {
             id: 2,
             name: 'Paul',
             age: 62,
-            city: 'Rome',
-        },
+            city: 'Rome'
+        }
     ],
     test7: [
         {
             id: 0,
             name: 'John',
             age: 93,
-            city: ['Patmos', 'Rome'],
+            city: ['Patmos', 'Rome']
         },
         {
             id: 1,
             name: 'Peter',
             age: 62,
-            city: 'Rome',
-        },
+            city: 'Rome'
+        }
     ],
     test8: [
         {
             id: 2,
             name: 'Luke',
             age: 84,
-            city: 'Boeotia',
+            city: 'Boeotia'
         },
         {
             id: 2,
             name: 'Paul',
             age: 62,
-            city: 'Rome',
-        },
+            city: 'Rome'
+        }
     ],
     test9: [
         {
             id: 0,
             name: 'John',
             age: 93,
-            city: ['Patmos', 'Rome'],
+            city: ['Patmos', 'Rome']
         },
         {
             id: 2,
             name: 'Luke',
             age: 84,
-            city: 'Boeotia',
-        },
+            city: 'Boeotia'
+        }
     ],
     test10: [
         {
             id: 0,
             name: 'John',
             age: 93,
-            city: ['Patmos', 'Rome'],
+            city: ['Patmos', 'Rome']
         },
         {
             id: 2,
             name: 'Luke',
             age: 84,
-            city: 'Boeotia',
-        },
+            city: 'Boeotia'
+        }
     ],
     test11: [
         {
             id: 1,
             name: 'Peter',
             age: 62,
-            city: 'Rome',
+            city: 'Rome'
         },
         {
             id: 2,
             name: 'Paul',
             age: 62,
-            city: 'Rome',
-        },
+            city: 'Rome'
+        }
     ],
     test12: [
         {
             id: 1,
             name: 'Peter',
             age: 62,
-            city: 'Rome',
+            city: 'Rome'
         },
         {
             id: 2,
             name: 'Luke',
             age: 84,
-            city: 'Boeotia',
+            city: 'Boeotia'
         },
         {
             id: 2,
             name: 'Paul',
             age: 62,
-            city: 'Rome',
-        },
+            city: 'Rome'
+        }
     ],
     test13: [
         {
             id: 0,
             name: 'John',
             age: 93,
-            city: ['Patmos', 'Rome'],
+            city: ['Patmos', 'Rome']
         },
         {
             id: 1,
             name: 'Peter',
             age: 62,
-            city: 'Rome',
+            city: 'Rome'
         },
         {
             id: 2,
             name: 'Paul',
             age: 62,
-            city: 'Rome',
-        },
-    ],
-};
+            city: 'Rome'
+        }
+    ]
+}
 
 test('Test 1 (==)', async (t) => {
     await t.test(
         'Should return 2 items from the array, where age is 62.',
         () => {
             assert.deepEqual(
-                expectedResults.test1,
-                exampleArray.multifilter('age', 62)
-            );
+                exampleArray.multifilter('age', 62),
+                expectedResults.test1
+            )
         }
-    );
-});
+    )
+})
 
 test('Test 2 (!=)', async (t) => {
     await t.test(
         'Should return 2 items from the array, where age is not 62.',
         () => {
             assert.deepEqual(
-                expectedResults.test2,
-                exampleArray.multifilter('age', 62, '!=')
-            );
+                exampleArray.multifilter('age', 62, '!='),
+                expectedResults.test2
+            )
         }
-    );
-});
+    )
+})
 
 test('Test 3 (>)', async (t) => {
     await t.test(
         'Should return 2 items from the array, where age is more than 62.',
         () => {
             assert.deepEqual(
-                expectedResults.test3,
-                exampleArray.multifilter('age', 62, '>')
-            );
+                exampleArray.multifilter('age', 62, '>'),
+                expectedResults.test3
+            )
         }
-    );
-});
+    )
+})
 
 test('Test 4 (>=)', async (t) => {
     await t.test(
@@ -275,10 +275,10 @@ test('Test 4 (>=)', async (t) => {
             assert.deepEqual(
                 expectedResults.test4,
                 exampleArray.multifilter('age', 84, '>=')
-            );
+            )
         }
-    );
-});
+    )
+})
 
 test('Test 5 (<)', async (t) => {
     await t.test(
@@ -287,10 +287,10 @@ test('Test 5 (<)', async (t) => {
             assert.deepEqual(
                 expectedResults.test5,
                 exampleArray.multifilter('age', 84, '<')
-            );
+            )
         }
-    );
-});
+    )
+})
 
 test('Test 6 (<=)', async (t) => {
     await t.test(
@@ -299,46 +299,46 @@ test('Test 6 (<=)', async (t) => {
             assert.deepEqual(
                 expectedResults.test6,
                 exampleArray.multifilter('age', 84, '<=')
-            );
+            )
         }
-    );
-});
+    )
+})
 
 test('Test 7 (multiple ==)', async (t) => {
     await t.test(
         'Should return 2 items from the array, where the name is John or Peter.',
         () => {
             assert.deepEqual(
-                expectedResults.test7,
-                exampleArray.multifilter('name', ['John', 'Peter'])
-            );
+                exampleArray.multifilter('name', ['John', 'Peter']),
+                expectedResults.test7
+            )
         }
-    );
-});
+    )
+})
 
 test('Test 8 (multiple !=)', async (t) => {
     await t.test(
         'Should return 2 items from the array, where the name is not John or Peter.',
         () => {
             assert.deepEqual(
-                expectedResults.test8,
-                exampleArray.multifilter('name', ['John', 'Peter'], '!=')
-            );
+                exampleArray.multifilter('name', ['John', 'Peter'], '!='),
+                expectedResults.test8
+            )
         }
-    );
-});
+    )
+})
 
 test('Test 9 (multiple >)', async (t) => {
     await t.test(
         'Should return 2 items from the array, where age is more than 62 and 63.',
         () => {
             assert.deepEqual(
-                expectedResults.test9,
-                exampleArray.multifilter('age', ['62', '63'], '>')
-            );
+                exampleArray.multifilter('age', ['62', '63'], '>'),
+                expectedResults.test9
+            )
         }
-    );
-});
+    )
+})
 
 test('Test 10 (multiple >=)', async (t) => {
     await t.test(
@@ -347,10 +347,10 @@ test('Test 10 (multiple >=)', async (t) => {
             assert.deepEqual(
                 expectedResults.test10,
                 exampleArray.multifilter('age', ['62', '84'], '>=')
-            );
+            )
         }
-    );
-});
+    )
+})
 
 test('Test 11 (multiple <)', async (t) => {
     await t.test(
@@ -359,10 +359,10 @@ test('Test 11 (multiple <)', async (t) => {
             assert.deepEqual(
                 expectedResults.test11,
                 exampleArray.multifilter('age', ['83', '84'], '<')
-            );
+            )
         }
-    );
-});
+    )
+})
 
 test('Test 12 (multiple <=)', async (t) => {
     await t.test(
@@ -371,10 +371,10 @@ test('Test 12 (multiple <=)', async (t) => {
             assert.deepEqual(
                 expectedResults.test12,
                 exampleArray.multifilter('age', ['84', '85'], '<=')
-            );
+            )
         }
-    );
-});
+    )
+})
 
 test('Test 13 (find in multiple values)', async (t) => {
     await t.test(
@@ -383,10 +383,10 @@ test('Test 13 (find in multiple values)', async (t) => {
             assert.deepEqual(
                 expectedResults.test13,
                 exampleArray.multifilter('city', ['Rome'])
-            );
+            )
         }
-    );
-});
+    )
+})
 
 test('Test 14', async (t) => {
     await t.test(
@@ -395,7 +395,7 @@ test('Test 14', async (t) => {
             assert.deepEqual(
                 [],
                 exampleArray.multifilter('example', 'notfound')
-            );
+            )
         }
-    );
-});
+    )
+})
