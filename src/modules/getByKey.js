@@ -1,20 +1,20 @@
 export default function getByKey(original, key, defaultValue) {
-    const keys = key.split('.');
+    const keys = key.split('.')
 
-    let reference = original;
+    let reference = original
 
     while (keys.length > 0) {
-        const referenceKey = keys.shift();
+        const referenceKey = keys.shift()
 
         if (
             reference === null ||
             reference === undefined ||
             !Object.prototype.hasOwnProperty.call(reference, referenceKey)
         ) {
-            return defaultValue;
+            return defaultValue
         }
-        reference = reference[referenceKey];
+        reference = reference[referenceKey]
     }
 
-    return reference;
+    return reference
 }
