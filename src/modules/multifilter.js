@@ -1,7 +1,6 @@
 import min from './min.js'
 import max from './max.js'
 
-const isNotOperator = (operator) => (operator === '!=' || operator === '<>')
 class Match {
     constructor(find, operator) {
         this.find = find
