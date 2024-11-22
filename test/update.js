@@ -1,19 +1,19 @@
-import test from 'node:test';
-import assert from 'node:assert';
-import { Arr } from '../src/helpers.js';
+import test from 'node:test'
+import assert from 'node:assert'
+import { Arr } from '../src/helpers.js'
 
 const exampleArray = new Arr([
     {
         id: 1,
         name: 'first',
-        value: 'X',
+        value: 'X'
     },
     {
         id: 2,
         name: 'second',
-        value: 'Y',
-    },
-]);
+        value: 'Y'
+    }
+])
 
 test('Update', async (t) => {
     await t.test('Update the last item', () => {
@@ -21,104 +21,104 @@ test('Update', async (t) => {
             [
                 {
                     id: 2,
-                    name: 'last',
-                },
+                    name: 'last'
+                }
             ],
             ['id']
-        );
+        )
         const expectedResults = [
             {
                 id: 1,
                 name: 'first',
-                value: 'X',
+                value: 'X'
             },
             {
                 id: 2,
                 name: 'last',
-                value: 'Y',
-            },
-        ];
-        assert.deepEqual(results, expectedResults);
-    });
+                value: 'Y'
+            }
+        ]
+        assert.deepEqual(results, expectedResults)
+    })
 
     await t.test('Update the first item', () => {
         const results = exampleArray.update(
             [
                 {
                     id: 1,
-                    name: 'first',
-                },
+                    name: 'first'
+                }
             ],
             ['id', 'name']
-        );
+        )
         const expectedResults = [
             {
                 id: 1,
                 name: 'first',
-                value: 'X',
+                value: 'X'
             },
             {
                 id: 2,
                 name: 'second',
-                value: 'Y',
-            },
-        ];
-        assert.deepEqual(results, expectedResults);
-    });
+                value: 'Y'
+            }
+        ]
+        assert.deepEqual(results, expectedResults)
+    })
 
     await t.test('Update both items', () => {
         const results = exampleArray.update(
             [
                 {
                     id: 1,
-                    name: 'een',
+                    name: 'een'
                 },
                 {
                     id: 2,
-                    name: 'twee',
-                },
+                    name: 'twee'
+                }
             ],
             ['id']
-        );
+        )
         const expectedResults = [
             {
                 id: 1,
                 name: 'een',
-                value: 'X',
+                value: 'X'
             },
             {
                 id: 2,
                 name: 'twee',
-                value: 'Y',
-            },
-        ];
-        assert.deepEqual(results, expectedResults);
-    });
+                value: 'Y'
+            }
+        ]
+        assert.deepEqual(results, expectedResults)
+    })
 
     await t.test('Try to update unknown item', () => {
         const results = exampleArray.update(
             [
                 {
                     id: 3,
-                    name: 'unknown',
-                },
+                    name: 'unknown'
+                }
             ],
             ['id']
-        );
+        )
         const expectedResults = [
             {
                 id: 1,
                 name: 'first',
-                value: 'X',
+                value: 'X'
             },
             {
                 id: 2,
                 name: 'second',
-                value: 'Y',
-            },
-        ];
-        assert.deepEqual(results, expectedResults);
-    });
+                value: 'Y'
+            }
+        ]
+        assert.deepEqual(results, expectedResults)
+    })
 
     await t.test(
         'Try to update unknown item because not all keys are correct',
@@ -127,24 +127,24 @@ test('Update', async (t) => {
                 [
                     {
                         id: 1,
-                        name: 'unknown',
-                    },
+                        name: 'unknown'
+                    }
                 ],
                 ['id', 'name']
-            );
+            )
             const expectedResults = [
                 {
                     id: 1,
                     name: 'first',
-                    value: 'X',
+                    value: 'X'
                 },
                 {
                     id: 2,
                     name: 'second',
-                    value: 'Y',
-                },
-            ];
-            assert.deepEqual(results, expectedResults);
+                    value: 'Y'
+                }
+            ]
+            assert.deepEqual(results, expectedResults)
         }
-    );
-});
+    )
+})

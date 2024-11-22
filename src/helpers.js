@@ -1,25 +1,25 @@
-import multisort from './modules/multisort.js';
-import multifilter from './modules/multifilter.js';
-import multikey from './modules/multikey.js';
-import intersect from './modules/intersect.js';
-import min from './modules/min.js';
-import max from './modules/max.js';
-import diff from './modules/diff.js';
-import unique from './modules/unique.js';
-import summ from './modules/summ.js';
-import average from './modules/average.js';
-import random from './modules/random.js';
-import getByKey from './modules/getByKey.js';
-import first from './modules/first.js';
-import last from './modules/last.js';
-import update from './modules/update.js';
+import multisort from './modules/multisort.js'
+import multifilter from './modules/multifilter.js'
+import multikey from './modules/multikey.js'
+import intersect from './modules/intersect.js'
+import min from './modules/min.js'
+import max from './modules/max.js'
+import diff from './modules/diff.js'
+import unique from './modules/unique.js'
+import summ from './modules/summ.js'
+import average from './modules/average.js'
+import random from './modules/random.js'
+import getByKey from './modules/getByKey.js'
+import first from './modules/first.js'
+import last from './modules/last.js'
+import update from './modules/update.js'
 
 /**
  * Object helper
  */
 class Arr extends Array {
     static get [Symbol.species]() {
-        return Array;
+        return Array
     }
 
     /**
@@ -29,7 +29,7 @@ class Arr extends Array {
      * @returns {any[]}
      */
     multisort(key, direction) {
-        return multisort(this[0], key, direction);
+        return multisort(this[0], key, direction)
     }
 
     /**
@@ -40,7 +40,7 @@ class Arr extends Array {
      * @returns {any[]}
      */
     multifilter(key, find, operator) {
-        return multifilter(this[0], key, find, operator);
+        return multifilter(this[0], key, find, operator)
     }
 
     /**
@@ -49,7 +49,7 @@ class Arr extends Array {
      * @returns {any[]}
      */
     multikey(key) {
-        return multikey(this[0], key);
+        return multikey(this[0], key)
     }
 
     /**
@@ -59,7 +59,7 @@ class Arr extends Array {
      * @returns {any[]}
      */
     intersect(array, multi) {
-        return intersect(this[0], array, multi);
+        return intersect(this[0], array, multi)
     }
 
     /**
@@ -69,7 +69,7 @@ class Arr extends Array {
      * @returns {any[]}
      */
     diff(array, total) {
-        return diff(this[0], array, total);
+        return diff(this[0], array, total)
     }
 
     /**
@@ -77,7 +77,7 @@ class Arr extends Array {
      * @returns {any[]}
      */
     get unique() {
-        return unique(this[0]);
+        return unique(this[0])
     }
 
     /**
@@ -87,10 +87,10 @@ class Arr extends Array {
      */
     pushIfNotExists(newValue) {
         if (this.indexOf(newValue) < 0) {
-            this.push(newValue);
+            this.push(newValue)
         }
 
-        return this.length;
+        return this.length
     }
 
     /**
@@ -99,9 +99,9 @@ class Arr extends Array {
      * @returns {number}
      */
     pushMultiple(newValues) {
-        this.push(...newValues);
+        this.push(...newValues)
 
-        return this.length;
+        return this.length
     }
 
     /**
@@ -111,13 +111,13 @@ class Arr extends Array {
      * @returns {number}
      */
     pushMultipleIfNotExists(newValues) {
-        const array = this;
+        const array = this
 
         newValues.forEach((value) => {
-            array.pushIfNotExists(value);
-        });
+            array.pushIfNotExists(value)
+        })
 
-        return array.length;
+        return array.length
     }
 
     /**
@@ -127,7 +127,7 @@ class Arr extends Array {
      * @returns {number}
      */
     get max() {
-        return max(this[0]);
+        return max(this[0])
     }
 
     /**
@@ -137,7 +137,7 @@ class Arr extends Array {
      * @returns {number}
      */
     get min() {
-        return min(this[0]);
+        return min(this[0])
     }
 
     /**
@@ -145,7 +145,7 @@ class Arr extends Array {
      * @returns {any}
      */
     get random() {
-        return random(this);
+        return random(this)
     }
 
     /**
@@ -153,7 +153,7 @@ class Arr extends Array {
      * @returns {number}
      */
     get summ() {
-        return summ(this[0]);
+        return summ(this[0])
     }
 
     /**
@@ -161,7 +161,7 @@ class Arr extends Array {
      * @returns {number}
      */
     get average() {
-        return average(this[0]);
+        return average(this[0])
     }
 
     /**
@@ -171,7 +171,7 @@ class Arr extends Array {
      * @returns {any|undefined}
      */
     getByKey(key, defaultValue) {
-        return getByKey(this[0], key, defaultValue);
+        return getByKey(this[0], key, defaultValue)
     }
 
     /**
@@ -179,7 +179,7 @@ class Arr extends Array {
      * @returns {any|undefined}
      */
     get first() {
-        return first(this[0]);
+        return first(this[0])
     }
 
     /**
@@ -187,7 +187,7 @@ class Arr extends Array {
      * @returns {any|undefined}
      */
     get last() {
-        return last(this[0]);
+        return last(this[0])
     }
 
     /**
@@ -197,7 +197,7 @@ class Arr extends Array {
      * @returns {any[]}
      */
     update(newValues, keys) {
-        return update(this[0], newValues, keys);
+        return update(this[0], newValues, keys)
     }
 }
 
@@ -217,5 +217,5 @@ export {
     getByKey,
     first,
     last,
-    update,
-};
+    update
+}
