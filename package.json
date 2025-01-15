@@ -1,6 +1,6 @@
 {
     "name": "@trojs/arrays",
-    "version": "6.0.0",
+    "version": "6.0.1",
     "description": "Usefull array helpers.",
     "files": [
         "src/helpers.js",
@@ -77,13 +77,6 @@
         "url": "https://github.com/sponsors/w3nl"
     },
     "overrides": {
-        "xml2js": "^0.6.0",
-        "eslint-plugin-sonarjs": {
-            "eslint": "^9.15.0",
-            "@typescript-eslint/eslint-plugin": "^8.0.0",
-            "@typescript-eslint/utils": "^8.0.0",
-            "eslint-plugin-import": "^2.31.0",
-            "eslint-plugin-react-hooks": "^5.0.0"
-        }
+        "xml2js": "^0.6.0"
     }
 }
