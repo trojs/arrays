@@ -1,43 +1,54 @@
 class Sorter {
-    constructor(key, direction) {
-        this.key = key
-        this.moveDirection = direction === 'desc' ? -1 : 1
+/**
+ * @param {string} key
+ * @param {("desc"|"asc")} direction
+ */
+  constructor (key, direction) {
+    this.key = key
+    this.moveDirection = direction === 'desc' ? -1 : 1
+  }
+
+  order (original) {
+    return original.sort(this.compare.bind(this))
+  }
+
+  compare (firstElement, secondElement) {
+    let nameA = firstElement[this.key]
+    let nameB = secondElement[this.key]
+
+    if (typeof nameA === 'string') {
+      nameA = nameA.toUpperCase()
     }
 
-    order(original) {
-        return original.sort(this.compare.bind(this))
+    if (typeof nameB === 'string') {
+      nameB = nameB.toUpperCase()
     }
 
-    compare(firstElement, secondElement) {
-        let nameA = firstElement[this.key]
-        let nameB = secondElement[this.key]
-
-        if (typeof nameA === 'string') {
-            nameA = nameA.toUpperCase()
-        }
-
-        if (typeof nameB === 'string') {
-            nameB = nameB.toUpperCase()
-        }
-
-        if (nameA < nameB) {
-            return -1 * this.moveDirection
-        }
-
-        if (nameA > nameB) {
-            return 1 * this.moveDirection
-        }
-
-        return 0
+    if (nameA < nameB) {
+      return -1 * this.moveDirection
     }
 
-    static create(original, key, direction) {
-        const sorter = new Sorter(key, direction)
-
-        return sorter.order(original)
+    if (nameA > nameB) {
+      return 1 * this.moveDirection
     }
+
+    return 0
+  }
+
+  static create (original, key, direction) {
+    const sorter = new Sorter(key, direction)
+
+    return sorter.order(original)
+  }
 }
 
-export default function multisort(original, key, direction) {
-    return Sorter.create(original, key, direction)
+/**
+ *
+ * @param {any[]} original
+ * @param {string} key
+ * @param {("desc"|"asc")=} direction
+ * @returns {any[]}
+ */
+export default function multisort (original, key, direction) {
+  return Sorter.create(original, key, direction)
 }
