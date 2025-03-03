@@ -1,6 +1,6 @@
 /**
  *
- * @param {any[]} original
+ * @param {object} original
  * @param {string} key
  * @param {object=} defaultValue
  * @returns {any|undefined}
