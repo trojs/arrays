@@ -7,5 +7,5 @@ export default function max (original) {
     return null
   }
 
-  return original.reduce((a, b) => Math.max(a, b), 0)
+  return original.reduce((a, b) => Math.max(a, b))
 }
