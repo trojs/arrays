@@ -3,14 +3,14 @@ import assert from 'node:assert'
 import { Arr } from '../src/helpers.js'
 
 test('Last', async (t) => {
-    await t.test(
-        'Should return the first, in this example should it be 3.',
-        () => {
-            assert.strictEqual(new Arr([1, 2, 3]).last, 3)
-        }
-    )
+  await t.test(
+    'Should return the first, in this example should it be 3.',
+    () => {
+      assert.strictEqual(new Arr([1, 2, 3]).last, 3)
+    }
+  )
 
-    await t.test('Test an empty array', () => {
-        assert.strictEqual(new Arr([]).last, null)
-    })
+  await t.test('Test an empty array', () => {
+    assert.strictEqual(new Arr([]).last, null)
+  })
 })
