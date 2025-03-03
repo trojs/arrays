@@ -134,7 +134,7 @@ test('Multisort', async (t) => {
   )
 
   await t.test(
-    'Test 3 (sort text ASC): Should return the array, sorted by age asc.',
+    'Test 3 (sort text ASC): Should return the array, sorted by name asc.',
     () => {
       assert.deepEqual(
         exampleArray.multisort('name', 'asc'),
