@@ -2,8 +2,8 @@
  *
  * @param {any[]} original
  * @param {string} key
- * @param {any} defaultValue
- * @returns {any}
+ * @param {object=} defaultValue
+ * @returns {any|undefined}
  */
 export default function getByKey (original, key, defaultValue) {
   const keys = key.split('.')

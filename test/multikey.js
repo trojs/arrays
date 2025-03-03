@@ -53,7 +53,7 @@ const expectedResults = {
 
 test('Multikey', async (t) => {
   await t.test(
-    'Test 1 (single): Should return the max, in this example should it be 3.',
+    'Test 1 (single): Should extract values from the specified key "name".',
     () => {
       assert.deepEqual(
         exampleArray.multikey('name'),
@@ -63,7 +63,7 @@ test('Multikey', async (t) => {
   )
 
   await t.test(
-    'Test 2 (multiple): Should return the max, in this example should it be 3.',
+    'Test 2 (multiple): Should extract objects with only the specified keys ["name", "age"].',
     () => {
       assert.deepEqual(
         exampleArray.multikey(['name', 'age']),

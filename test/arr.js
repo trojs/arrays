@@ -16,7 +16,7 @@ test('Instance', async (t) => {
   await t.test(
     'Test if the original output from Arr is a instance of Array',
     () => {
-      assert.strictEqual(original instanceof Array, true)
+      assert.strictEqual(Array.isArray(original), true)
     }
   )
 
@@ -25,7 +25,7 @@ test('Instance', async (t) => {
   })
 
   await t.test('Test if the mappen result is a instance of Array', () => {
-    assert.strictEqual(mapped instanceof Array, true)
+    assert.strictEqual(Array.isArray(mapped), true)
   })
 
   await t.test('Test the original result', () => {
