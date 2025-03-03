@@ -7,5 +7,5 @@ export default function min (original) {
     return null
   }
 
-  return original.reduce((a, b) => Math.min(a, b))
+  return original.reduce((a, b) => Math.min(a, b), Infinity)
 }

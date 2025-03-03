@@ -16,7 +16,7 @@ export default function getByKey (original, key, defaultValue) {
     if (
       reference === null
       || reference === undefined
-      || !Object.prototype.hasOwnProperty.call(reference, referenceKey)
+      || !Object.hasOwn(reference, referenceKey)
     ) {
       return defaultValue
     }
