@@ -37,25 +37,11 @@ jobs:
           git pull
           npm version $TAG --no-git-tag-version
           jq '.version = "'$TAG'"' jsr.json > jsr.json.tmp && mv jsr.json.tmp jsr.json
-          git add package.json package-lock.json
-          git add package.json package-lock.json
-          git add jsr.json
+          git add package.json package-lock.json jsr.json
           git commit -m "ci: set version to $TAG [skip ci]" || true
           git push origin main
       - run: npm run build --if-present
       - run: npm publish --access public
         env:
             NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
-  publish-jsr:
-    needs: publish-npm
-    runs-on: ubuntu-latest
-    permissions:
-        contents: read
-        id-token: write
-    steps:
-        - uses: actions/checkout@v4
-        - uses: actions/setup-node@v4
-          with:
-            node-version: 22
-        - run: npm ci
-        - run: npx jsr publish
+      - run: npx jsr publish
