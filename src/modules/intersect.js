@@ -8,7 +8,6 @@ import toJson from './toJson.js'
  */
 export default function intersect (original, array, multi) {
   const jsonValue = toJson(array)
-  const arrayLength = array.length
 
   if (!multi) {
     const currentArraySet = new Set(toJson(original))
@@ -16,17 +15,8 @@ export default function intersect (original, array, multi) {
     return [...currentArraySet.intersection(otherArraySet)].map((item) => JSON.parse(item))
   }
 
-  return original.filter((value) => {
-    const valueToJson = JSON.stringify(value)
-
-    const found = jsonValue.reduce((accumulator, currentValue) => {
-      if (currentValue.includes(valueToJson)) {
-        return accumulator + 1
-      }
-
-      return accumulator
-    }, 0)
-
-    return found === arrayLength
-  })
+  return original.filter((value) => array.every((item) => {
+    const otherArraySet = new Set(toJson(item))
+    return new Set(toJson([value])).isSubsetOf(otherArraySet)
+  }))
 }
