@@ -3,7 +3,7 @@
  * @returns {number}
  */
 export default (original) => {
-  if (typeof original !== 'object' || original.length < 1) {
+  if (!Array.isArray(original) || original.length < 1) {
     return null
   }
 
