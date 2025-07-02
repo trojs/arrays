@@ -19,7 +19,8 @@
         "src/modules/summ.js",
         "src/modules/toJson.js",
         "src/modules/unique.js",
-        "src/modules/update.js"
+        "src/modules/update.js",
+        "src/types.d.ts"
     ],
     "main": "src/helpers.js",
     "source": "src/helpers.js",
