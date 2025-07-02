@@ -7,16 +7,18 @@ import toJson from './toJson.js'
  * @returns {any[]}
  */
 export default function intersect (original, array, multi) {
-  const jsonValue = toJson(array)
+  const currentArray = toJson(original)
 
   if (!multi) {
-    const currentArraySet = new Set(toJson(original))
-    const otherArraySet = new Set(jsonValue)
+    const currentArraySet = new Set(currentArray)
+    const otherArraySet = new Set(toJson(array))
     return [...currentArraySet.intersection(otherArraySet)].map((item) => JSON.parse(item))
   }
 
-  return original.filter((value) => array.every((item) => {
-    const otherArraySet = new Set(toJson(item))
-    return new Set(toJson([value])).isSubsetOf(otherArraySet)
-  }))
+  return currentArray.filter(
+    (value) => array.every(
+      (item) => toJson(item).includes(value)
+    )
+  )
+    .map((item) => JSON.parse(item))
 }
