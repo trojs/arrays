@@ -36,6 +36,7 @@ jobs:
           git checkout main
           git pull
           npm version $TAG --no-git-tag-version
+          jq '.version = "'$TAG'"' jsr.json > jsr.json.tmp && mv jsr.json.tmp jsr.json
           git add package.json package-lock.json
           git commit -m "ci: set version to $TAG [skip ci]" || true
           git push origin main
@@ -55,17 +56,4 @@ jobs:
           with:
             node-version: 22
         - run: npm ci
-        - name: Set version in jsr.json from tag
-          run: |
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            TAG=${GITHUB_REF#refs/tags/}
-            TAG=${TAG#v}
-            git fetch origin main
-            git checkout main
-            git pull
-            jq '.version = "'$TAG'"' jsr.json > jsr.json.tmp && mv jsr.json.tmp jsr.json
-            git add jsr.json
-            git commit -m "ci: set jsr.json version to $TAG [skip ci]" || true
-            git push origin main
         - run: npx jsr publish
