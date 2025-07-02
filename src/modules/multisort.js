@@ -9,7 +9,7 @@ class Sorter {
   }
 
   order (original) {
-    return original.sort(this.compare.bind(this))
+    return original.toSorted(this.compare.bind(this))
   }
 
   compare (firstElement, secondElement) {
