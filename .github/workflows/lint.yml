@@ -18,5 +18,6 @@ jobs:
       run: |
         npm ci
         npm run lint
+        npm run lint:types
       env:
         CI: true
