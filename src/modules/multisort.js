@@ -49,6 +49,4 @@ class Sorter {
  * @param {("desc"|"asc")=} direction
  * @returns {any[]}
  */
-export default function multisort (original, key, direction) {
-  return Sorter.create(original, key, direction)
-}
+export default (original, key, direction) => Sorter.create(original, key, direction)

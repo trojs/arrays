@@ -79,6 +79,4 @@ class Match {
  * @param {(boolean|string)=} operator
  * @returns {any[]}
  */
-export default function multifilter (original, key, find, operator) {
-  return Match.create(original, key, find, operator)
-}
+export default (original, key, find, operator) => Match.create(original, key, find, operator)

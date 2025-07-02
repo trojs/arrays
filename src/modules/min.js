@@ -2,7 +2,7 @@
  * @param {any[]} original
  * @returns {number}
  */
-export default function min (original) {
+export default (original) => {
   if (typeof original !== 'object' || original.length < 1) {
     return null
   }

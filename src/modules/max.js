@@ -2,7 +2,7 @@
  * @param {any[]} original
  * @returns {number}
  */
-export default function max (original) {
+export default (original) => {
   if (!Array.isArray(original) || original.length < 1) {
     return null
   }
