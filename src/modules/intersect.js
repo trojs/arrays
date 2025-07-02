@@ -10,20 +10,23 @@ export default function intersect (original, array, multi) {
   const jsonValue = toJson(array)
   const arrayLength = array.length
 
+  if (!multi) {
+    const currentArraySet = new Set(toJson(original))
+    const otherArraySet = new Set(jsonValue)
+    return [...currentArraySet.intersection(otherArraySet)].map((item) => JSON.parse(item))
+  }
+
   return original.filter((value) => {
     const valueToJson = JSON.stringify(value)
-    if (multi) {
-      const found = jsonValue.reduce((accumulator, currentValue) => {
-        if (currentValue.includes(valueToJson)) {
-          return accumulator + 1
-        }
 
-        return accumulator
-      }, 0)
+    const found = jsonValue.reduce((accumulator, currentValue) => {
+      if (currentValue.includes(valueToJson)) {
+        return accumulator + 1
+      }
 
-      return found === arrayLength
-    }
+      return accumulator
+    }, 0)
 
-    return jsonValue.includes(valueToJson)
+    return found === arrayLength
   })
 }
