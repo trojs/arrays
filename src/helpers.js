@@ -1,3 +1,5 @@
+/* @ts-self-types="./types.d.ts" */
+
 import multisort from './modules/multisort.js'
 import multifilter from './modules/multifilter.js'
 import multikey from './modules/multikey.js'
