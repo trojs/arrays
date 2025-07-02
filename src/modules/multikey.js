@@ -6,7 +6,7 @@
 export default (original, key) => original.map((value) => {
   const item = {}
 
-  if (typeof key === 'object') {
+  if (Array.isArray(key)) {
     key.forEach((itemKey) => {
       item[itemKey] = value[itemKey]
     })
