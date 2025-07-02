@@ -24,6 +24,7 @@
     "main": "src/helpers.js",
     "source": "src/helpers.js",
     "module": "src/helpers.js",
+    "types": "src/types.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/trojs/arrays.git"
