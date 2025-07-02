@@ -2,7 +2,7 @@
  * @param {any[]} originalArray
  * @returns {number}
  */
-export default function summ (originalArray) {
+export default (originalArray) => {
   if (!Array.isArray(originalArray) || originalArray.length < 1) {
     return null
   }

@@ -5,7 +5,7 @@
  * @param {object=} defaultValue
  * @returns {any|undefined}
  */
-export default function getByKey (original, key, defaultValue) {
+export default (original, key, defaultValue) => {
   const keys = key.split('.')
 
   let reference = original

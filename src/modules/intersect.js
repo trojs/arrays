@@ -6,7 +6,7 @@ import toJson from './toJson.js'
  * @param {boolean} multi
  * @returns {any[]}
  */
-export default function intersect (original, array, multi) {
+export default (original, array, multi) => {
   const currentArray = toJson(original)
 
   if (!multi) {

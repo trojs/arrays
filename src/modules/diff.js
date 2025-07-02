@@ -6,7 +6,7 @@ import toJson from './toJson.js'
  * @param {boolean} total
  * @returns {any[]}
  */
-export default function diff (currentArray, otherArray, total) {
+export default (currentArray, otherArray, total) => {
   const currentArraySet = new Set(toJson(currentArray))
   const otherArraySet = new Set(toJson(otherArray))
 
