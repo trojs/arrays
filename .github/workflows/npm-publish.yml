@@ -38,6 +38,8 @@ jobs:
           npm version $TAG --no-git-tag-version
           jq '.version = "'$TAG'"' jsr.json > jsr.json.tmp && mv jsr.json.tmp jsr.json
           git add package.json package-lock.json
+          git add package.json package-lock.json
+          git add jsr.json
           git commit -m "ci: set version to $TAG [skip ci]" || true
           git push origin main
       - run: npm run build --if-present
