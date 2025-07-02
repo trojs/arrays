@@ -16,6 +16,7 @@ import update from './modules/update.js'
 
 /**
  * Object helper
+ * @type {import('./types.d.ts').Arr}
  */
 class Arr extends Array {
   static get [Symbol.species] () {

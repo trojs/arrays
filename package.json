@@ -24,6 +24,7 @@
     "main": "src/helpers.js",
     "source": "src/helpers.js",
     "module": "src/helpers.js",
+    "types": "src/types.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/trojs/arrays.git"
@@ -46,6 +47,7 @@
         "lint": "eslint",
         "lint:report": "eslint -f json -o report.json",
         "lint:fix": "eslint --fix",
+        "lint:types": "tsc --noEmit --project tsconfig.json --skipLibCheck",
         "test": "node --test --experimental-test-coverage --test-reporter=spec --test-reporter=lcov --test-reporter-destination=stdout --test-reporter-destination=./coverage/lcov.info",
         "example": "node example/node.js",
         "cpd": "node_modules/jscpd/bin/jscpd src",
@@ -53,9 +55,11 @@
     },
     "devDependencies": {
         "@trojs/lint": "^0.3.0",
+        "@types/node": "^24.0.10",
         "eslint": "^9.15.0",
         "globals": "^16.0.0",
-        "jscpd": "^4.0.5"
+        "jscpd": "^4.0.5",
+        "typescript": "^5.8.3"
     },
     "type": "module",
     "engines": {
