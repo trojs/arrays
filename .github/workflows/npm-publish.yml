@@ -16,7 +16,7 @@ jobs:
           token: ${{ secrets.GH_PAT }} # Use your PAT here!
       - uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - name: Set version from tag
