@@ -1,6 +1,6 @@
 {
   "name": "@trojs/arrays",
-  "version": "7.1.11",
+  "version": "",
   "license": "MIT",
   "exports": "./src/helpers.js"
 }
